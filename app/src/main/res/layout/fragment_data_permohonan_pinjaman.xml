@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".FormStep5Fragment">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:text="@string/kondisi_usaha_saat_ini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/jenis_usaha_ps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_jenis_usaha"
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_jenis_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/komoditas_usaha_ps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIL_jenis_usaha" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_komoditas_usaha_ps"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_komoditas_usaha_ps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_komoditas_usaha_ps" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/lama_usaha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_komoditas_usaha_ps" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_lama_usaha"
+            style="@style/TextInputLayout.DropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_4">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_lama_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_lama_usaha_2"
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/textIL_lama_usaha">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_lama_usaha_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/sumber_bahan_produksi_jasa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_lama_usaha" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_sumber_bahan_produksi_jasa"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_sumber_bahan_produksi_jasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_sumber_bahan_produksi_jasa"
+                android:maxLength="50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_6"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/kapasitas_usaha_produksi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_sumber_bahan_produksi_jasa" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_kapasitas_usaha_produksi"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_kapasitas_usaha_produksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_kapasitas_usaha_produksi"
+                android:maxLength="50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_7"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/nilai_ekonomi_usaha_rp_produksi_jasa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_kapasitas_usaha_produksi" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_nilai_ekonomi_usaha_rp_produksi_jasa"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_nilai_ekonomi_usaha_rp_produksi_jasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="25" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_8"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/tujuan_pemasaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_nilai_ekonomi_usaha_rp_produksi_jasa" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_tujuan_pemasaran"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_tujuan_pemasaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_tujuan_pemasaran"
+                android:maxLines="50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_9"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/mitra_usaha_jika_ada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_tujuan_pemasaran" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mitra_usaha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_mitra_usaha" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tambah_mitra_usaha"
+            style="@style/Button.Outline.Primary.700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:text="@string/tambah_mitra_usaha"
+            android:textColor="@color/primary_main_color_700"
+            app:icon="@drawable/ic_plus_green"
+            app:iconGravity="textStart"
+            app:iconTint="@color/primary_main_color_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_mitra_usaha"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tv_10"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:text="@string/prospek_usaha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_tambah_mitra_usaha" />
+
+        <TextView
+            android:id="@+id/tv_11"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/rencana_penggunaan_modal_pinjaman"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_10" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_rencana_penggunaan_modal_pinjaman"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_11">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_rencana_penggunaan_modal_pinjaman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:maxLength="50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_12"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="20dp"
+            android:text="@string/perkiraan_omzet_harga_jual_pendapatan_kotor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIL_rencana_penggunaan_modal_pinjaman" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_perkiraan_omzet_harga_jual_pendapatan_kotor"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_12">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_perkiraan_omzet_harga_jual_pendapatan_kotor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="25" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_13"
+            style="@style/TextSM.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:text="@string/perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_perkiraan_omzet_harga_jual_pendapatan_kotor" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_13">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="25" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_14"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/perkiraan_pendapatan_bersih"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_perkiraan_pendapatan_bersih"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_14">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_perkiraan_pendapatan_bersih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="25" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_15"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/siklus_usaha_produksi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_perkiraan_pendapatan_bersih" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_siklus_usaha_produksi"
+            style="@style/TextInputLayout.DropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_large_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_15">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_siklus_usaha_produksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_siklus_usaha_produksi_2"
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/textIL_siklus_usaha_produksi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_siklus_usaha_produksi_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

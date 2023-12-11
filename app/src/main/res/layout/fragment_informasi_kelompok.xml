@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <id.bpdlh.fdb.core.common.widget.FdbStepper
+        android:id="@+id/stepper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        app:description="@string/informasi_kelompok"
+        app:step="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepper"
+        app:layout_constraintBottom_toTopOf="@id/inc_footer">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_kps"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama_kps"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nama_kps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nama_kps"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dasar_persetujuan_penetapan_perjanjian"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dasar_persetujuan"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dasar_persetujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/masukkan_dasar_persetujuan_penetapan_perjanjian"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_kups_jika_ada"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama_kups"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorIconDrawable="@null"
+                app:errorTextAppearance="@style/ErrorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nama_kups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_nama_kups"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dasar_pembentukan_no_izin_kups"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dasar_pembentukan_izin_kups"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dasar_pembentukan_izin_kups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_dasar_pembentukan_no_izin"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tanggal_dan_tahun_berdiri"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tahun_berdiri"
+                style="@style/TextInputLayout.Calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_tahun_berdiri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/pilih_tanggal_dan_tahun_berdiri"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:text="@string/fungsi_kawasan"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_fungsi_kawasan"
+                style="@style/TextInputLayout.DropDown"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_provinsi">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edt_fungsi_kawasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/pilih_fungsi_kawasan"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:id="@+id/ll_alamat"
+                layout="@layout/fragment_alamat_ktp"/>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/inc_footer"
+        layout="@layout/menu_formulir_perorangan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepper"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/base_margin_medium"
+        android:background="@drawable/bg_rounded_outlined"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_step_one"
+            android:layout_width="@dimen/base_margin_large"
+            android:layout_height="@dimen/base_margin_large"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/gl_top"
+            app:srcCompat="@drawable/ic_step_base" />
+
+        <View
+            android:id="@+id/view_progress_one"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/progress_height"
+            android:background="@color/primary_main_color_600"
+            app:layout_constraintBottom_toBottomOf="@id/iv_step_one"
+            app:layout_constraintEnd_toStartOf="@id/iv_step_two"
+            app:layout_constraintStart_toEndOf="@id/iv_step_one"
+            app:layout_constraintTop_toTopOf="@id/iv_step_one" />
+
+        <ImageView
+            android:id="@+id/iv_step_two"
+            android:layout_width="@dimen/base_margin_large"
+            android:layout_height="@dimen/base_margin_large"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toStartOf="@+id/iv_step_three"
+            app:layout_constraintStart_toEndOf="@id/iv_step_one"
+            app:layout_constraintTop_toTopOf="@id/gl_top"
+            android:src="@drawable/ic_step_active" />
+
+        <View
+            android:id="@+id/view_progress_two"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/progress_height"
+            android:background="@color/gray_200"
+            app:layout_constraintBottom_toBottomOf="@id/iv_step_one"
+            app:layout_constraintEnd_toStartOf="@id/iv_step_three"
+            app:layout_constraintStart_toEndOf="@id/iv_step_two"
+            app:layout_constraintTop_toTopOf="@id/iv_step_one" />
+
+        <ImageView
+            android:id="@+id/iv_step_three"
+            android:layout_width="@dimen/base_margin_large"
+            android:layout_height="@dimen/base_margin_large"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toStartOf="@+id/iv_step_four"
+            app:layout_constraintStart_toEndOf="@id/iv_step_two"
+            app:layout_constraintTop_toTopOf="@id/gl_top"
+            android:src="@drawable/ic_step_disabled" />
+
+        <View
+            android:id="@+id/view_progress_three"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/progress_height"
+            android:background="@color/gray_200"
+            app:layout_constraintBottom_toBottomOf="@id/iv_step_one"
+            app:layout_constraintEnd_toStartOf="@id/iv_step_four"
+            app:layout_constraintStart_toEndOf="@id/iv_step_three"
+            app:layout_constraintTop_toTopOf="@id/iv_step_one" />
+
+        <ImageView
+            android:id="@+id/iv_step_four"
+            android:layout_width="@dimen/base_margin_large"
+            android:layout_height="@dimen/base_margin_large"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/gl_top"
+            android:src="@drawable/ic_step_disabled" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextSM.SemiBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin_medium"
+            android:textColor="@color/gray_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_step"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_step_one" />
+
+        <TextView
+            android:id="@+id/tv_step"
+            style="@style/TextSM.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintBottom_toBottomOf="@id/tv_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/base_margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepper"
+        app:layout_constraintBottom_toTopOf="@id/inc_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jenis_usaha"
+                android:visibility="gone"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/jenis_usaha" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jenis_usaha"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jenis_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pilih_jenis_usaha"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/textIL_komoditas_hhbk" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/kondisi_usaha_saat_ini"
+                style="@style/TextSM.SemiBold.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/kondisi_usaha_saat_ini" />
+
+            <TextView
+                android:id="@+id/komoditas_hhbk"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/komoditas_hhbk" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_komoditas_hhbk"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_komoditas_hhbk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pilih_komoditas_hhbk"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/til_jenis_kegiatan_pengelolaan" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/jenis_kegiatan_pengelolaan"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/jenis_kegiatan_pengelolaan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jenis_kegiatan_pengelolaan"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jenis_kegiatan_pengelolaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/masukan_jenis_kegiatan_pengelolaan"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/til_jenis_usaha_non_kehutanan" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/jenis_usaha_non_kehutanan"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/jenis_usaha_non_kehutanan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jenis_usaha_non_kehutanan"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jenis_usaha_non_kehutanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/masukan_jenis_usaha_non_kehutanan"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/til_komiditas_usaha" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/komoditas_usaha"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/komoditas_usaha" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_komiditas_usaha"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_komoditas_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_komoditas_usaha"
+                    android:nextFocusDown="@+id/til_komiditas_usaha"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lama_usaha"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/lama_usaha" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_lama_usaha"
+                    style="@style/TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/til_lama_usaha_satuan">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_lama_usaha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/til_lama_usaha_satuan"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_lama_usaha_satuan"
+                    style="@style/TextInputLayout.DropDown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/til_lama_usaha"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_lama_usaha_satuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/produktivitas_hasil_panen_terakhir"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/produktivitas_hasil_panen_terakhir" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_produktivitas_hasil_panen_terakhir"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_produktivitas_hasil_panen_terakhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_produktivitas_hasil_panen_terakhir"
+                    android:nextFocusDown="@+id/til_sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm"
+                    android:nextFocusDown="@+id/til_kapasitas_usaha" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/kapasitas_usaha"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/kapasitas_usaha_produksi" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_kapasitas_usaha"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_kapasitas_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/masukan_kapasitas_usaha_produksi"
+                    android:nextFocusDown="@+id/til_harga_jual_kg" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/harga_jual_kg"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/form_permohonan_non_sosial_harga_jual_kg" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_harga_jual_kg"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_harga_jual_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rp"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/til_luas_lahan_yang_di_garap" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/harga_penjualan_terakhir"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:visibility="gone"
+                android:text="@string/harga_penjualan_terakhir" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_harga_penjualan_terakhir"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_harga_penjualan_terakhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rp"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/til_luas_lahan_yang_di_garap" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/luas_lahan_yang_di_garap"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/form_permohonan_non_sosial_luas_layanan_yang_digarap" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_luas_lahan_yang_di_garap"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_luas_lahan_yang_di_garap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/form_permohonan_non_sosial_luas_layanan_yang_digarap_hint"
+                    android:nextFocusDown="@+id/til_omzet_usaha" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/omzet_usaha"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/omzet_usaha" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_omzet_usaha"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_omzet_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rp"
+                    android:nextFocusDown="@+id/til_hpp_modal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/hpp_modal"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/hpp_modal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_hpp_modal"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_hpp_modal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rp"
+                    android:nextFocusDown="@+id/til_pendapatan_bersih" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/pendapatan_bersih"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/pendapatan_bersih" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pendapatan_bersih"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_pendapatan_bersih"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rp"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/til_tujuan_pemasaran" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tujuan_pemasaran"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/tujuan_pemasaran" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tujuan_pemasaran"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_tujuan_pemasaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_tujuan_pemasaran"
+                    android:nextFocusDown="@+id/til_siklus_usaha" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tujuan_pengajuan_pinjaman"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/tujuan_pengajuan_pinjaman" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tujuan_pengajuan_pinjaman"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_tujuan_pengajuan_pinjaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_tujuan_pengajuan_pinjaman"
+                    android:nextFocusDown="@+id/til_siklus_usaha" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_9"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/mitra_usaha_jika_ada"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textIL_tujuan_pemasaran" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mitra_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_mitra_usaha" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tambah_mitra_usaha"
+                style="@style/Button.Outline.Primary.700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                android:text="@string/tambah_mitra_usaha"
+                android:textColor="@color/primary_main_color_700"
+                app:icon="@drawable/ic_plus_green"
+                app:iconGravity="textStart"
+                app:iconTint="@color/primary_main_color_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_mitra_usaha"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tipe_usaha"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/tipe_usaha" />
+
+            <RadioGroup
+                android:id="@+id/radio_tipe_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium">
+
+                <RadioButton
+                    android:id="@+id/radio_dikelola_sendiri"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_mini"
+                    android:text="@string/dikelola_sendiri"/>
+
+                <RadioButton
+                    android:id="@+id/radio_dikelola_orang_lain"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_mini"
+                    android:text="@string/dikelola_orang_lain"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/siklus_usaha"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/siklus_usaha" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_siklus_usaha"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_siklus_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukan_siklus_usaha"
+                    android:nextFocusDown="@+id/til_kuantitas_komoditas_yang_sudah_ada" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/kuantitas_komoditas_yang_sudah_ada"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/kuantitas_komoditas_yang_sudah_ada" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_kuantitas_komoditas_yang_sudah_ada"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_kuantitas_komoditas_yang_sudah_ada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/masukan_kuantitas_komoditas_yang_sudah_ada"
+                    android:nextFocusDown="@+id/til_rencana_penggunaan_dana_pinjaman" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/rencana_penggunaan_dana_pinjaman"
+                style="@style/TextSM.Medium"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/rencana_penggunaan_dana_pinjaman" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_rencana_penggunaan_dana_pinjaman"
+                style="@style/TextInputLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_rencana_penggunaan_dana_pinjaman"
+                    android:textAlignment="textStart"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:ems="10"
+                    android:hint="@string/masukan_rencana_penggunaan_dana_pinjaman"
+                    android:nextFocusDown="@+id/til_harga_penjualan_terakhir" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/prospek_usaha"
+                style="@style/TextSM.SemiBold.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/prospek_usaha" />
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/tujuan_pengajuan_pinjaman" />
+
+            <RadioGroup
+                android:id="@+id/radio_tujuan_pengajuan_pinjaman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium">
+
+                <RadioButton
+                    android:id="@+id/radio_untuk_modal_kerja"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_mini"
+                    android:text="@string/untuk_modal_kerja"/>
+
+                <RadioButton
+                    android:id="@+id/radio_untuk_inventasi"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_mini"
+                    android:text="@string/untuk_investasi"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/jelaskan_tujuan_pengajuan_pinjaman_anda"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/jelaskan_tujuan_pengajuan_pinjaman_anda" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jelaskan_tujuan_pengajuan_pinjaman_anda"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jelaskan_tujuan_pengajuan_pinjaman_anda"
+                    android:textAlignment="textStart"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:ems="10"
+                    android:hint="@string/masukan_jelaskan_tujuan_pengajuan_pinjaman_anda"
+                   />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/perkiraan_omzet_harga_jual_pendapatan_kotor"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/perkiraan_omzet_harga_jual_pendapatan_kotor" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_perkiraan_omzet_harga_jual_pendapatan_kotor"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_perkiraan_omzet_harga_jual_pendapatan_kotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/rp"
+                    android:nextFocusDown="@+id/til_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/rp"
+                    android:nextFocusDown="@+id/til_perkiraan_pendapatan_bersih" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/perkiraan_pendapatan_bersih"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/perkiraan_pendapatan_bersih" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_perkiraan_pendapatan_bersih"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_perkiraan_pendapatan_bersih"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/rp"
+                    android:nextFocusDown="@+id/til_rencana_penggunaan_dana_pinjaman" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/siklus_usaha_produksi"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/siklus_usaha_produksi" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_siklus_usaha_produksi"
+                    style="@style/TextInputLayout"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/til_siklus_usaha_produksi_unit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_siklus_usaha_produksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/til_lama_usaha_satuan"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_siklus_usaha_produksi_unit"
+                    style="@style/TextInputLayout.DropDown"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/til_siklus_usaha_produksi"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_siklus_usaha_produksi_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/laporan_laba_rugi"
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/laporan_laba_rugi" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/cv_laporan_laba_rugi"
+                layout="@layout/fragment_upload_file" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/inc_footer"
+        layout="@layout/menu_formulir_perorangan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/base_margin_mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

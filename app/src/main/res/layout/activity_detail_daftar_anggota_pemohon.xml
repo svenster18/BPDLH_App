@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/inc_toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/base_margin_medium"
+                android:paddingVertical="@dimen/base_margin_large_20">
+
+                <TextView
+                    style="@style/TextSM.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_tanggal_pengajuan_anggota" />
+
+                <TextView
+                    android:id="@+id/tv_tanggal_pengajuan_anggota"
+                    style="@style/TextSM.Regular.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    tools:text="10 Agustus 2023" />
+
+                <TextView
+                    style="@style/TextSM.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_medium"
+                    android:text="@string/total_anggota_diajukan" />
+
+                <TextView
+                    android:id="@+id/tv_total_anggota_diajukan"
+                    style="@style/TextSM.Regular.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    tools:text="10.000 orang" />
+
+                <TextView
+                    android:id="@+id/tv_total_nilai_permohonan"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_medium"
+                    android:text="@string/text_total_nilai_permohonan" />
+
+                <TextView
+                    android:id="@+id/tv_total_nilai_permohonan_value"
+                    style="@style/TextSM.SemiBold.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    android:background="@drawable/bg_gray_50_rounded"
+                    android:paddingHorizontal="@dimen/base_margin_small"
+                    android:paddingVertical="@dimen/base_margin_mini"
+                    tools:text="RP 10.000.000" />
+
+
+                <TextView
+                    style="@style/TextSM.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_medium"
+                    android:text="@string/text_tanggal_disetujui" />
+
+                <TextView
+                    android:id="@+id/tv_tanggal_disetujui"
+                    style="@style/TextSM.Regular.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    tools:text="12 Agustus 2033" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextMD.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/text_daftar_anggota" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_detail_daftar_anggota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_detail_daftar_anggota" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_margin_medium" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

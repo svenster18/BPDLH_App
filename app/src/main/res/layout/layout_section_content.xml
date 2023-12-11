@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/base_margin_medium"
+    android:layout_marginStart="@dimen/base_margin_small"
+    android:layout_marginEnd="@dimen/base_margin_small">
+
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gray_50_rounded"
+        android:paddingStart="@dimen/base_margin_medium"
+        android:paddingEnd="@dimen/base_margin_medium"
+        android:paddingBottom="@dimen/base_margin_large"
+        android:paddingTop="@dimen/base_margin_large_30"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_section_menu">
+
+        <TextView
+            android:id="@+id/tv_section_menu"
+            style="@style/TextSM.SemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_900"
+            android:minLines="2"
+            android:layout_gravity="center"
+            android:gravity="center|top"
+            tools:text="Pengajuan Daftar Permohonan"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_section_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_pengajuan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/primary_main_color_600</color>
+    <color name="colorPrimaryDark">@color/primary_main_color_700</color>
+    <color name="colorAccent">@color/primary_main_color_100</color>
+
+    <!-- Gunakan color di bagian ini. Kalau belum ada, silakan ditambah -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_main_color_25">#F7FFFA</color>
+    <color name="primary_main_color_50">#EEFFF4</color>
+    <color name="primary_main_color_100">#D6FFE8</color>
+    <color name="primary_main_color_200">#B0FFD3</color>
+    <color name="primary_main_color_300">#72FFB2</color>
+    <color name="primary_main_color_400">#2EFA88</color>
+    <color name="primary_main_color_500">#03E468</color>
+    <color name="primary_main_color_600">#00BD52</color>
+    <color name="primary_main_color_700">#01A24A</color>
+    <color name="primary_main_color_800">#077439</color>
+    <color name="primary_main_color_900">#085F32</color>
+
+    <color name="secondary_orange_25">#FFFBF7</color>
+    <color name="secondary_orange_50">#FEF6EE</color>
+    <color name="secondary_orange_100">#FEEBD6</color>
+    <color name="secondary_orange_200">#FBD3AD</color>
+    <color name="secondary_orange_300">#F9B378</color>
+    <color name="secondary_orange_400">#F58A42</color>
+    <color name="secondary_orange_500">#F3742D</color>
+    <color name="secondary_orange_600">#E34F13</color>
+    <color name="secondary_orange_700">#BC3A12</color>
+    <color name="secondary_orange_800">#962F16</color>
+    <color name="secondary_orange_900">#792A15</color>
+
+    <color name="success_50">#ECFDF3</color>
+    <color name="success_700">#027A48</color>
+
+    <color name="warning_25">#FFFCF5</color>
+    <color name="warning_50">#FFFAEB</color>
+    <color name="warning_100">#FEF0C7</color>
+    <color name="warning_200">#FEDF89</color>
+    <color name="warning_300">#FEC84B</color>
+    <color name="warning_400">#FDB022</color>
+    <color name="warning_500">#F79009</color>
+    <color name="warning_600">#DC6803</color>
+    <color name="warning_700">#B54708</color>
+    <color name="warning_800">#93370D</color>
+    <color name="warning_900">#7A2E0E</color>
+
+    <color name="error_50">#FEF3F2</color>
+    <color name="error_200">#FECDCA</color>
+    <color name="error_500">#F04438</color>
+    <color name="error_600">#D92D20</color>
+    <color name="error_700">#B42318</color>
+
+    <color name="gray_25">#FCFCFD</color>
+    <color name="gray_50">#F9FAFB</color>
+    <color name="gray_100">#F2F4F7</color>
+    <color name="gray_200">#EAECF0</color>
+    <color name="gray_300">#D0D5DD</color>
+    <color name="gray_400">#98A2B3</color>
+    <color name="gray_500">#667085</color>
+    <color name="gray_600">#475467</color>
+    <color name="gray_700">#344054</color>
+    <color name="gray_800">#1D2939</color>
+    <color name="gray_900">#101828</color>
+
+    <color name="green_25">#F6FEF9</color>
+    <color name="green_50">#EDFCF2</color>
+    <color name="green_100">#D3F8DF</color>
+    <color name="green_200">#AAF0C4</color>
+    <color name="green_300">#73E2A3</color>
+    <color name="green_400">#3CCB7F</color>
+    <color name="green_500">#16B364</color>
+    <color name="green_600">#099250</color>
+    <color name="green_700">#087443</color>
+    <color name="green_800">#095C37</color>
+    <color name="green_900">#084C2E</color>
+
+    <!--    font color-->
+    <color name="neutral_gray_1">#333333</color>
+
+    <!--    color semantic? -->
+    <color name="semantic_warning_300">#F5AE70</color>
+    <color name="semantic_warning_700">#8F480A</color>
+    <color name="semantic_success_300">#82E3AA</color>
+    <color name="semantic_success_700">#1C7D44</color>
+
+    <!--    badge color-->
+    <color name="blue_light_50">#F0F9FF</color>
+    <color name="blue_light_700">#026AA2</color>
+    <color name="rose_50">#FFF1F3</color>
+    <color name="rose_700">#C01048</color>
+    <color name="purple_50">#F4F3FF</color>
+    <color name="purple_700">#5925DC</color>
+
+</resources>

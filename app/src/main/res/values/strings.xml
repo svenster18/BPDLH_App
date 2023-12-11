@@ -1,0 +1,605 @@
+<resources>
+    <string name="app_name">BPDLH App</string>
+    <string name="version_name">Version %s</string>
+
+    <!--    Login-->
+
+    <string name="label_login_perorangan">FDB Perorangan</string>
+    <string name="label_login_subtitle">Silakan login untuk mengakses semua fitur!</string>
+    <string name="label_login">Login</string>
+    <string name="label_email_nik">Email/NIK</string>
+    <string name="label_email_address">Alamat Email</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="hint_input_email">Masukkan Alamat Email Akun Anda</string>
+    <string name="hint_input_password">Masukkan Password Akun Anda</string>
+
+    <string name="btn_login">Masuk</string>
+    <string name="btn_forgot_password">Lupa Password</string>
+    <string name="btn_register">Daftar</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_finalisasi_registrasi">Finalisasi Registrasi</string>
+
+    <string name="label_email_not_registered">Maaf Alamat Email yang Anda Masukkan Tidak Terdaftar</string>
+    <string name="label_email_empty">Masukkan Alamat Email untuk Login akun anda</string>
+    <string name="label_email_wrong_format">Harap masukkan format Alamat Email yang sesuai</string>
+    <string name="label_access_not_allowed">Anda tidak memiliki akses mobile fulfillment</string>
+    <string name="label_pass_empty">Masukkan Password untuk Login akun anda</string>
+    <string name="label_login_failed">Login Gagal harap periksa kembali email &amp; password login anda</string>
+    <string name="label_email_pass_empty">Masukkan Alamat Email &amp; Password untuk Login akun anda</string>
+    <string name="label_pass_wrong_format">Harap masukkan format password yang sesuai</string>
+    <string name="label_pass_less_then_six">Panjang password minimal 6 karakter</string>
+    <string name="label_empty_detail_report">Detail laporan belum dapat ditampilkan.</string>
+    <string name="label_check_phone">Nomor Telepon Pemilik sama dengan Customer</string>
+    <string name="label_pass_not_same">Password tidak sama</string>
+
+    <!--    Profile-->
+    <string name="profile">Profile</string>
+    <string name="name_profil">Olivia Rhye</string>
+    <string name="ubah_kata_sandi">Ubah Kata Sandi</string>
+    <string name="logout">Logout</string>
+
+    <!--Edit Akun-->
+    <string name="ubah_akun_saya">Ubah Akun Saya</string>
+    <string name="nama_lembaga">Nama Lembaga</string>
+    <string name="lembaga_hint">Lembaga A</string>
+    <string name="e_mail">E-mail</string>
+    <string name="sk_pembentukan_berita_acara">SK Pembentukan atau berita acara pembentukan</string>
+    <string name="nomor_npwp">Nomor NPWP</string>
+    <string name="email_address">lembaga@gmail.com</string>
+    <string name="negara">Negara</string>
+    <string name="informasi_narahubung">Informasi Narahubung</string>
+    <string name="nama_narahubung">Nama Narahubung</string>
+    <string name="jabatan">Jabatan</string>
+    <string name="telepon">Telepon</string>
+    <string name="berhasil_edit">Berhasil menyimpan perubahan</string>
+
+    <!--Change Password-->
+    <string name="kata_sandi_sekarang">Kata Sandi Sekarang</string>
+    <string name="masukan_kata_sandi_sekarang">Masukan Kata Sandi Sekarang</string>
+    <string name="label_pass_less_then_eight">Panjang password minimal 8 karakter</string>
+    <string name="kata_sandi_baru">Kata Sandi Baru</string>
+    <string name="masukkan_kata_sandi_baru">Masukkan Kata Sandi Baru</string>
+    <string name="ulangi_kata_sandi_baru">Ulangi Kata Sandi Baru</string>
+
+    <!--Logout-->
+    <string name="ya_keluar">Ya, Keluar</string>
+    <string name="apakah_anda_yakin_akan_keluar_dari_aplikasi">Apakah Anda yakin akan Keluar dari Aplikasi?</string>
+    <string name="keluar_dari_aplikasi_berarti_anda_berhenti_mengakses_aplikasi_dan_harus_login_kembali">Keluar dari aplikasi berarti Anda berhenti mengakses aplikasi dan harus login kembali</string>
+
+    <!--    Profile-->
+    <string name="company_label">Company</string>
+    <string name="name_label">Nama</string>
+    <string name="sales_label">Sales Person</string>
+    <string name="email_label">Email</string>
+    <string name="phone_label">No HP</string>
+    <string name="product_label">Produk</string>
+    <string name="product_info_label">Info Lengkap Produk</string>
+    <string name="default_company">Company Sales</string>
+    <string name="approved_button">Setuju</string>
+    <string name="dismissed_button">Batal</string>
+    <string name="txt_phone_default">08123456789</string>
+    <string name="txt_name_default">Cahyo Supratman</string>
+    <string name="txt_email_default">mascahyo31@gmail.com</string>
+    <string name="txt_confirmation">Konfirmasi</string>
+    <string name="btn_yes">Ya</string>
+
+    <!--    Warning-->
+    <string name="warning_no_connection">Ups. Tidak Ada Koneksi Internet</string>
+    <string name="default_warning_no_connection">Unable to resolve host</string>
+    <string name="btn_try_again">COBA LAGI</string>
+
+    <!-- general action edit delete bottom sheet -->
+    <string name="general_action_edit">Edit</string>
+    <string name="general_action_delete">Delete</string>
+    <string name="general_action_title">Action</string>
+
+
+    <!-- Forget Password -->
+    <string name="forget_password_label_title">Lupa Kata Sandi</string>
+    <string name="forget_password_button_send">Kirim</string>
+    <string name="forget_password_button_back_to_login">Kembali ke Login</string>
+    <string name="forget_password_instruction">*Kami akan mengirim tautan untuk mengatur ulang kata sandi Anda.</string>
+    <string name="forget_password_instruction_update_password">Link password baru akun Anda telah terkirim. Periksa inbox email Anda dan silahkan login kembali dengan link yang dikirimkan.</string>
+    <string name="forget_password_finish">Selesai</string>
+    <string name="forget_password_close">Kembali</string>
+    <string name="update_password_label_title">Ubah Kata Sandi </string>
+    <string name="update_password_instruction">*Masukkan kata sandi baru anda untuk mengatur ulang kata sandi anda</string>
+    <string name="update_password_password_instruction">*Kata Sandi harus 8 Karakter (Minimal 1 huruf Kapital Dan 1 Angka)</string>
+    <string name="update_password_label_password">Kata Sandi</string>
+    <string name="update_password_rules">*Kata sandi harus 8 karakter (minimal 1 huruf kapital dan 1 angka)</string>
+    <string name="update_password_label_password_confirm">Konfirmasi Kata Sandi</string>
+    <string name="update_password_button_send">Kirim</string>
+    <string name="update_password_hint_input_password">Masukkan password baru akun Anda</string>
+    <string name="update_password_failed_message">Maaf, Anda belum berhasil mengatur password Anda. \nSilahkan coba lagi.</string>
+    <string name="update_password_failed_close">COBA LAGI</string>
+    <string name="update_password_success_message">Selamat, Anda telah berhasil mengatur password Anda. \nSilahkan tutup halaman ini.</string>
+    <string name="update_password_success_close">OK</string>
+    <string name="update_password_dialog_message_title">Atur Password</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_beranda">Beranda</string>
+    <string name="menu_profil">Profil</string>
+    <string name="txt_lengkapi_dokumen">Lengkapi Dokumen di bawah</string>
+    <string name="txt_lengkapi_dokumen_message">Anda bisa upload Formulir Pendaftaran Kelompok jika semua dokumen kategori dibawah ini sudah dilengkapi!.</string>
+
+    <!-- Home   -->
+    <string name="pendaftaran_kelompok">Pendaftaran Kelompok</string>
+    <string name="pendaftaran_perorangan">Pendaftaran Perorangan</string>
+    <string name="upload_semua_persyaratan">Upload Semua Persyaratan</string>
+    <string name="layanan_lain">Layanan Lainnya</string>
+    <string name="pengajuan_daftar_permohonan">Pengajuan Daftar Permohonan</string>
+    <string name="txt_permohonan_pembiayaan">Permohonan Pembiayaan</string>
+    <string name="txt_penawaran">Penawaran</string>
+    <string name="txt_perjanjian">Perjanjian</string>
+    <string name="txt_permohonan_pencairan">Permohonan Pencairan</string>
+    <string name="txt_pencairan">Pencairan</string>
+    <string name="ticker_title_dalam_proses_pengkajian">Dalam Proses Pengkajian</string>
+    <string name="ticker_message_dalam_proses_pengkajian">Formulir Pendaftaran Kelompok berhasil diupload dan dalam proses pengkajian, harap menunggu dan selalu mengecek status yang ada ditiap kategori penilaian.</string>
+    <string name="ticker_title_kembali_upload_persyaratan">Kembali Upload Persyaratan</string>
+    <string name="ticker_message_kembali_upload_persyaratan">Setelah proses mengubah data yang ditolak harap kembali mengupload persyaratan.</string>
+    <string name="status_draft">Draft</string>
+    <string name="status_data_belum_lengkap">Data Belum Lengkap</string>
+    <string name="status_menunggu_verifikasi">Menunggu Verifikasi</string>
+    <string name="status_ditolak">Ditolak</string>
+    <string name="status_disetujui">Disetujui</string>
+    <string name="status_data_sudah_dilengkapi">Data Sudah Dilengkapi</string>
+
+    <!-- Self Assesment-->
+    <string name="self_assesment_title">Self Assesment</string>
+    <string name="self_assesment_desc">Lorem ipsum dolor sit amet consectetur. Malesuada ultrices enim feugiat adipiscing cursus enim.</string>
+    <string name="self_assesment_start">Mulai Assesment</string>
+    <string name="self_assesment_badge_warning">Data Belum Lengkap</string>
+    <string name="self_assesment_button_finish">Lihat Detail</string>
+
+    <!--Registrasi Perorangan-->
+    <string-array name="description">
+        <item>Data Calon Debitur</item>
+        <item>Data Pasangan</item>
+        <item>Alamat</item>
+        <item>Informasi Keuangan</item>
+        <item>Dokumen Legalitas</item>
+    </string-array>
+
+    <!--General Information-->
+    <string name="wajib_upload_ktp">Wajib Upload KTP</string>
+    <string name="wajib_upload_kk">Wajib Upload KK</string>
+    <string name="wajib_di_isi">Wajib diisi</string>
+    <string name="jenis_kelamin_debitur">Jenis Kelamin Debitur</string>
+
+    <!--  Maps  -->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="lokasi_anda">Lokasi Anda</string>
+    <string name="lokasi_tidak_ditemukan">Lokasi tidak ditemukan. Coba Lagi</string>
+    <string name="pilih_lokasi">Pilih Lokasi</string>
+
+    <!--Informasi Keuangan-->
+    <string name="wajib_upload_dokumen_pendukung">Wajib Upload Dokumen Pendukung</string>
+    <string name="siklus_pendapatan_placeholder">%1$d %2$s</string>
+    <string name="siklus_pendapatan">Siklus Pendapatan</string>
+
+    <!--Dokumen Legalitas-->
+    <string name="wajib_upload_swafoto">Wajib Upload Swafoto</string>
+    <string name="wajib_upload_foto_rumah">Wajib Upload Foto Rumah</string>
+    <string name="wajib_upload_foto_usaha">Wajib Upload Foto Usaha</string>
+
+    <!--  Dokumen Legalitas  -->
+    <string name="masukan_nama_dokumen_lainnya">Masukan nama dokumen lainnya</string>
+    <string name="dokumen_lainnya">Dokumen Lainnya</string>
+    <string name="batal">Batal</string>
+    <string name="kirim_pertanyaan">Kirim Pertanyaan</string>
+    <string name="nama_dokumen_lainnya">Nama Dokumen Lainnya</string>
+
+    <!--  Tambah Usaha  -->
+    <string name="tambah_usaha">Tambah Usaha</string>
+
+    <!--General Confirmation-->
+    <string name="pertanyaan_konfirmasi">Anda yakin akan submit semua data ini?</string>
+    <string name="keterangan_ubah_data">Setelah anda submit anda masih bisa mengubah data.</string>
+    <string name="submit">Iya, Submit</string>
+    <string name="pertanyaan_konfirmasi_layanan">Apakah Anda yakin ingin melanjutkan layanan ini?</string>
+    <string name="keterangan_lanjut">Setelah anda menyimpan sebagai draft anda masih bisa melanjutkannya.</string>
+    <string name="lanjutkan">Iya, Lanjutkan</string>
+    <string name="ubah_layanan">Tidak, Ubah Layanan</string>
+
+    <!-- Formulir pendaftaran kelompok-->
+    <string name="informasi_kelompok">Informasi Kelompok</string>
+    <string name="nama_kps">Nama Kelompok</string>
+    <string name="dasar_persetujuan_penetapan_perjanjian">Dasar persetujuan/penetapan/perjanjian akses kawasan</string>
+    <string name="masukkan_dasar_persetujuan_penetapan_perjanjian">Masukkan dasar persetujuan/penetapan/perjanjian akses kawasan</string>
+    <string name="nama_kups_jika_ada">Nama KUPS (Jika Ada)</string>
+    <string name="masukkan_nama_kups">Masukkan nama KUPS</string>
+    <string name="dasar_pembentukan_no_izin_kups">Dasar Pembentukan/No Izin KUPS (jika Ada)</string>
+    <string name="masukkan_dasar_pembentukan_no_izin">Masukkan dasar pembentukan/No Izin</string>
+    <string name="tanggal_dan_tahun_berdiri">Tanggal dan tahun berdiri</string>
+    <string name="pilih_tanggal_dan_tahun_berdiri">Pilih tanggal dan tahun berdiri</string>
+    <string name="fungsi_kawasan"><![CDATA[Fungsi Kawasan & Skema BPS]]></string>
+    <string name="pilih_fungsi_kawasan"><![CDATA[Pilih fungsi kawasan & skema PS]]></string>
+    <string name="formulir_pendaftaran_kelompok">Formulir Pendaftaran Kelompok</string>
+    <string name="detail_kegiatan_kelompok">Detail Kegiatan Kelompok</string>
+    <string name="kegiatan_kelompok_yang_telah_dilaksanakan">Kegiatan-kegiatan kelompok yang telah dilaksanakan</string>
+    <string name="hint_kegiatan_kelompok_yang_telah_dilaksanakan">Masukkan kegiatan-kegiatan kelompok yang telah dilaksanakan</string>
+    <string name="mitra_usaha_kelompok">Mitra Usaha Kelompok (Jika Ada)</string>
+    <string name="hint_mitra_usaha_kelompok">Masukkan mitra usaha kelompok (jika ada)</string>
+    <string name="gambaran_umum_jenis_usaha">Gambaran umum jenis-jenis usaha anggota kelompok yang dibiayai</string>
+    <string name="hint_gambaran_umum_jenis_usaha">Masukkan gambaran umum jenis-jenis usaha anggota kelompok yang dibiayai</string>
+    <string name="dibuat_pada_tanggal">Dibuat pada tanggal</string>
+    <string name="hint_dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="dibuat_pada_tempat">Dibuat pada (Tempat)</string>
+    <string name="hint_masukkan_dibuat_pada_tempat">Masukkan dibuat pada (tempat)</string>
+    <string name="nama_ketua_kps">Nama Ketua KPS</string>
+    <string name="hint_nama_ketua_kps">Masukkan nama Ketua KPS</string>
+    <string name="nomor_telepon_ketua_kps">Nomor Telepon Ketua KPS</string>
+    <string name="hint_nomor_telepon_ketua_kps">Masukkan nomor telepon Ketua KPS</string>
+    <string name="nik_ktp_ketua_kps">NIK KTP Ketua KPS</string>
+    <string name="hint_nik_ktp_ketua_kps">Masukkan NIK KTP Ketua KPS</string>
+    <string name="nama_sekretaris_kps">Nama Sekretaris KPS</string>
+    <string name="hint_nama_sekretaris_kps">Masukkan nama sekretaris KPS</string>
+    <string name="nomor_telepon_sekretaris_kps">Nomor Telepon Sekretaris KPS</string>
+    <string name="hint_nomor_telepon_sekretaris_kps">Masukkan nomor telepon sekretaris KPS</string>
+    <string name="nama_bendahara_kps">Nama Bendahara KPS</string>
+    <string name="hint_nama_bendahara_kps">Masukkan nama bendahara KPS</string>
+    <string name="nomor_telepon_bendahara_kps">Nomor Telepon Bendahara KPS</string>
+    <string name="hint_nomor_telepon_bendahara_kps">Masukkan nomor telepon bendahara KPS</string>
+    <string name="nama_pendamping_kps">Nama Pendamping KPS</string>
+    <string name="hint_nama_pendamping_kps">Masukkan nama pendamping KPS</string>
+    <string name="nomor_telepon_pendamping_kps">Nomor Telepon Pendamping KPS</string>
+    <string name="hint_nomor_telepon_pendamping_kps">Masukkan nomor telepon pendamping KPS</string>
+    <string name="afiliasi_pendamping">Afiliasi Pendamping KPS</string>
+    <string name="hint_afiliasi_pendamping">Masukkan afiliasi pendamping KPS</string>
+    <string name="batas_akhir_kepengurusan">Batas Akhir Kepengurusan</string>
+    <string name="hint_batas_akhir_kepengurusan">Pilih batas akhir kepengurusan</string>
+    <string name="jumlah_anggota_kps_kups">Jumlah anggota KPS/KUPS (Termasuk yang tidak mengajukan pinjaman)</string>
+    <string name="hint_jumlah_anggota_kps_kups">Masukkan jumlah anggota KPS/KUPS (Termasuk yang tidak mengajukan pinjaman)</string>
+    <string name="jumlah_anggota_kps_kups_yang_mengajukan_permohonan">Jumlah anggota KPS/KUPS yang mengajukan permohonan</string>
+    <string name="hint_jumlah_anggota_kps_kups_yang_mengajukan_permohonan">Masukkan jumlah anggota KPS/KUPS yang mengajukan permohonan</string>
+    <string name="jumlah_andil_garapan">Jumlah Andil Garapan</string>
+    <string name="hint_jumlah_andil_garapan">Masukkan jumlah andil garapan</string>
+    <string name="total_luas_lahan">Total Luas Lahan</string>
+    <string name="hint_total_luas_lahan">Masukkan total luas lahan</string>
+    <string name="ticker_saya_setuju">Saya Setuju</string>
+    <string name="ticker_message_formulir_pendaftaran_kelompok">Segala isi dan pernyataan yang terdapat pada formulir ini kami buat dengan sebenar-benarnya tanpa ada paksaan dari suatu apapun.</string>
+    <string name="informasi_kepengurusan_kelompok">Informasi Kepengurusan Kelompok</string>
+    <string name="text_kategori_usaha">Kategori Usaha</string>
+    <string name="btn_gambaran_umum">Tambah Gambaran umum jenis-jenis usaha</string>
+    <string name="text_gambaran_umum_title">Tambah Gambaran umum</string>
+    <string name="text_mitra_usaha_title">Tambah Mitra Usaha Kelompok</string>
+
+    <!-- Formulir pendaftaran kelompok non sosial-->
+    <string name="formulir_pendaftaran_kelompok_non_sosial_text_stepper">%1s dari 4</string>
+    <string name="formulir_pendaftaran_kelompok_non_sosial">Formulir Pendaftaran Kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_non_sosial_informasi_kelompok">Informasi Kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_non_sosial_informasi_kepengurusan">Informasi Kepengurusan Kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_non_sosial_detail_kegiatan_kelompok">Detail Kegiatan Kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_non_sosial_dokumen_legalitas">Dokumen Legalitas</string>
+    <string name="formulir_pendaftaran_kelompok_nama_kps">Nama KPS</string>
+    <string name="sk_pembentukan_atau_berita_acara_pembentukan">SK Pembentukan Atau Berita acara Pembentukan</string>
+    <string name="formulir_pendaftaran_kelompok_nama_ketua">Nama Ketua Kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_nama_ketua_hint">Masukan nama ketua kelompok</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_ketua">Nomer Telepon Ketua</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_ketua_hint">Masukan nomer telepon ketua</string>
+    <string name="formulir_pendaftaran_kelompok_nik_ktp_ketua">NIK KTP Ketua</string>
+    <string name="formulir_pendaftaran_kelompok_nik_ktp_ketua_hint">Masukan NIK KTP ketua</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_ketua">Jenis Kelamin Ketua</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_ketua_hint">Pilih Jenis Kelamin Ketua</string>
+    <string name="formulir_pendaftaran_kelompok_nama_sekeretaris">Nama sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_nama_sekeretaris_hint">Masukan nama sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_sekeretaris">Nomer Telepon Sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_sekeretaris_hint">Masukan telepon sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_sekretaris">Jenis Kelamin Sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_sekretaris_hint">Pilih Jenis Kelamin Sekretaris</string>
+    <string name="formulir_pendaftaran_kelompok_nama_bendahara">Nama Bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_nama_bendahara_hint">Masukan nama bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_bendahara">Nomer Telepon Bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_bendahara_hint">Masukan nomer telepon bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_bendahara">Jenis Kelamin Bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_bendahara_hint">Pilih Jenis Kelamin Bendahara</string>
+    <string name="formulir_pendaftaran_kelompok_nama_pendamping">Nama Pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_nama_pendamping_hint">Masukan nama pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_pendamping">Nomer Pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_nomer_pendamping_hint">Masukan nomer pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_pendamping">Jenis Kelamin Pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_jenis_kelamin_pendamping_hint">Pilih Jenis Kelamin Pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_status_pendamping">Status Pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_status_pendamping_hint">Masukan status pendamping</string>
+    <string name="formulir_pendaftaran_kelompok_jumnlah_anggota">Jumlah anggota (Termasuk yang tidak mengajukan pinjaman)</string>
+    <string name="formulir_pendaftaran_kelompok_jumnlah_anggota_hint">Masukan jumlah anggota KPS/KUPS</string>
+    <string name="formulir_pendaftaran_kelompok_jumlah_andil_garapan">Jumlah Andil Garapan</string>
+    <string name="formulir_pendaftaran_kelompok_jumlah_andil_garapan_hint">Masukan jumlah andil harapan</string>
+    <string name="formulir_pendaftaran_kelompok_total_luas_lahan">Total Luas Lahan</string>
+    <string name="formulir_pendaftaran_kelompok_total_luas_lahan_hint">Masukan total luas lahan</string>
+    <string name="formulir_pendaftaran_kelompok_kegiatan">Kegiatan - kegiatan kelompok yang telah dilaksanakan</string>
+    <string name="formulir_pendaftaran_kelompok_kegiatan_hint">Masukan kegiatan - kegiatan kelompok yang telah dilaksanakan</string>
+    <string name="formulir_pendaftaran_kelompok_jumlah_anggota_permohonan">Jumlah Anggota yang mengajukan permohonan</string>
+    <string name="formulir_pendaftaran_kelompok_jumlah_anggota_permohonan_hint">Masukan jumlah Anggota yang telah mengajukan permohonan</string>
+    <string name="formulir_pendaftaran_kelompok_mitra_usaha">Mitra Usaha Kelompok (Jika Ada)</string>
+    <string name="formulir_pendaftaran_kelompok_mitra_usaha_hint">Masukan mitra usaha kelompok (jika Ada)</string>
+    <string name="formulir_pendaftaran_kelompok_gambaran_umum">Gambaran umum jenis - jenis usaha anggota kelompok yang dibiayai</string>
+    <string name="formulir_pendaftaran_kelompok_gambaran_umum_hint">Masukan gambaran umum jenis - jenis usaha anggota kelompok yang dibiayai</string>
+    <string name="formulir_pendaftaran_kelompok_dibuat_pada">Dibuat Pada (Tempat)</string>
+    <string name="formulir_pendaftaran_kelompok_dibuat_pada_hint">Masukan dibuat pada (tempat)</string>
+    <string name="text_tambah_kegiatan">Tambah Kegiatan</string>
+    <string name="text_kategori">Kategori</string>
+    <string name="text_kategori_hint">Pilih Kategori</string>
+    <string name="text_kategori_usaha_hint">Pilih Kategori Usaha</string>
+    <string name="text_kegiatan">Kegiatan</string>
+    <string name="text_kegiatan_hint">Pilih Kegiatan</string>
+    <string name="text_deskripsi">Deskripsi</string>
+    <string name="text_deskripsi_hint">Masukkan Kegiatan</string>
+    <string name="text_mitra_usaha_hint">Masukkan mitra usaha</string>
+    <string name="tab_kegiatan_kelompok">Kegiatan Kelompok</string>
+    <string name="tab_mitra_usaha">Mitra Usaha</string>
+    <string name="tab_gambaran_umum">Gambaran Umum</string>
+    <string name="tambah_kegiatan_kelompok">Tambah Kegiatan Kelompok</string>
+    <string name="tambah_gambaran_umum">Tambah Gambaran Umum</string>
+
+    <!--  Pengajuan Daftar Permohonan  -->
+    <string name="tab_draft">Draft</string>
+    <string name="tab_on_progress">On Progress</string>
+    <string name="tab_menunggu_verifikasi">Menunggu Verifikasi</string>
+    <string name="tab_terverifikasi">Terverifikasi</string>
+    <string name="total_anggota_diajukan">Total Anggota Diajukan</string>
+    <string name="total_anggota_diajukan_value">%s Orang</string>
+    <string name="btn_lanjutkan_draft">Lanjutkan Draft</string>
+    <string name="ajukan_anggota">Ajukan Anggota</string>
+    <string name="cari_berdasarkan_tanggal">Cari berdasarkan tanggal</string>
+    <string name="btn_lihat_detail">Lihat Detail</string>
+    <string name="text_data_empty">Belum Ada Data</string>
+
+    <!--  Daftar anggota pemohon  -->
+    <string name="text_daftar_anggota_pemohon">Daftar Anggota Pemohon</string>
+    <string name="text_tambah_debitur">Tambah Debitur</string>
+    <string name="text_detail_daftar_anggota_pemohon">Detail Daftar Anggota Pemohon</string>
+    <string name="text_tanggal_pengajuan_anggota">Tanggal Pengajuan Anggota</string>
+    <string name="text_tanggal_disetujui">Tanggal Disetujui</string>
+    <string name="text_daftar_anggota">Daftar Anggota</string>
+    <string name="text_tanggal_lahir">Tanggal Lahir</string>
+    <string name="text_no_telepon">No Telepon</string>
+    <string name="text_disetujui_oleh">Disetujui Oleh</string>
+    <string name="btn_lengkapi_data_lainnya">Lengkapi Data Lainnya</string>
+    <string name="text_tambah_debitur_pending_title">Anggota yang Didaftarkan Sedang Melakukan Pembiayaan</string>
+    <string name="text_tambah_debitur_pending_message">Harap Mengisikan Anggota Lainnya Atau Submit Pengajuan Permohonan Anggota.</string>
+    <string name="btn_ok_saya_mengerti">OK, Saya Mengerti</string>
+    <string name="text_nama_debitur">Nama Debitur</string>
+    <string name="text_tanggal_dan_tahun_lahir">Tanggal dan tahun lahir</string>
+    <string name="text_hint_pilih_tanggal_dan_tahun_lahir">Pilih tanggal dan tahun lahir</string>
+    <string name="btn_tambah">Tambah</string>
+    <string name="text_hint_masukkan_nama_debitur">Masukkan nama debitur</string>
+    <string name="text_jumlah_orang">%1s orang</string>
+    <string name="txt_lengkapi">Lengkapi</string>
+    <string name="txt_formulir">Formulir</string>
+    <string name="txt_data_sudah_lengkap">Data sudah lengkap</string>
+    <string name="text_general_informasi">General Informasi</string>
+    <string name="text_informasi_akun_kelompok">Informasi Akun Kelompok</string>
+    <string name="text_sebelumnya">Sebelumnya</string>
+    <string name="hint_masukkan_nama_kelompok">Masukkan nama kelompok</string>
+    <string name="text_dasar_persetujuan_berita_acara">Dasar persetujuan/penetapan/perjanjian akses kawasan/SK Pembentukan atau berita acara pembentukan</string>
+    <string name="hint_masukkan">Masukkan</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="jenis_kelamin_hint">Pilih jenis kelamin</string>
+
+    <!--  Pengajuan Daftar Permohonan Non Sosial -->
+    <string name="text_total_nilai_permohonan">Total Nilai Permohonan</string>
+    <string name="text_terbilang">Terbilang</string>
+    <string name="text_jenis_layanan">Jenis Layanan</string>
+    <string name="text_jenis_layanan_hint">Pilih jenis layanan</string>
+    <string name="text_nilai_permohonan">Nilai Permohonan</string>
+    
+    <!--Permohonan Pembiayaan-->
+    <string name="permohonan_pembiayaan">Permohonan Pembiayaan</string>
+    <string name="menunggu_review">Menunggu Review</string>
+    <string name="disetujui">Disetujui</string>
+    <string name="ditolak">Ditolak</string>
+    <string name="permohonan_sedang_berjalan">Permohonan sedang Berjalan</string>
+    <string name="anda_tidak_bisa_menambakan_permohonan_baru_karena_masih_ada_proses_permohonan_yang_berjalan">Anda tidak bisa menambakan permohonan baru karena masih ada proses permohonan yang berjalan.</string>
+    <string name="urutkan_berdasarkan_tanggal">Urutkan Berdasarkan Tanggal</string>
+    <string name="tab_menunggu_review">Menunggu Review</string>
+    <string name="tab_disetujui">Disetujui</string>
+    <string name="tab_ditolak">Ditolak</string>
+    <string name="nilai_permohonan">Nilai Permohonan</string>
+    <string name="lanjutkan_permohonan">Lanjutkan Permohonan</string>
+    <string name="tanggal_permohonan">Tanggal Permohonan</string>
+    <string name="refinancing_kehutanan">Refinancing Kehutanan</string>
+    <string name="hhbk">HHBK</string>
+
+    <!--Formulir Pembiayaan Perhutanan Sosial-->
+    <string-array name="pembiayaan_perhutanan_description">
+        <item>Data Calon Debitur</item>
+        <item>Data Pasangan</item>
+        <item>Alamat</item>
+        <item>Informasi Keuangan</item>
+        <item>Data Permohonan Pinjaman</item>
+        <item>Data Permohonan Pinjaman</item>
+        <item>Jaminan</item>
+    </string-array>
+    <string-array name="siklus_pendapatan">
+        <item>Minggu</item>
+        <item>Bulan</item>
+        <item>Tahun</item>
+    </string-array>
+
+    <!--Data Permohonan Pinjaman-->
+    <string name="kondisi_usaha_saat_ini">Kondisi Usaha Saat Ini</string>
+    <string name="jenis_usaha_ps">Jenis Usaha PS</string>
+    <string name="masukan_komoditas_usaha_ps">Masukan komoditas usaha PS</string>
+    <string name="sumber_bahan_produksi_jasa">Sumber Bahan Produksi/Jasa</string>
+    <string name="masukan_sumber_bahan_produksi_jasa">Masukan sumber bahan produksi/jasa</string>
+    <string name="kapasitas_usaha_produksi">Kapasitas Usaha/Produksi</string>
+    <string name="masukan_kapasitas_usaha_produksi">Masukan kapasitas usaha/produksi</string>
+    <string name="nilai_ekonomi_usaha_rp_produksi_jasa">Nilai Ekonomi Usaha (Rp Produksi/Jasa)</string>
+    <string name="tujuan_pemasaran">Tujuan Pemasaran</string>
+    <string name="masukan_tujuan_pemasaran">Masukan tujuan pemasaran</string>
+    <string name="mitra_usaha_jika_ada">Mitra Usaha (Jika Ada)</string>
+    <string name="tambah_mitra_usaha">Tambah Mitra Usaha</string>
+    <string name="prospek_usaha">Prospek Usaha</string>
+    <string name="rencana_penggunaan_modal_pinjaman">Rencana Penggunaan Modal Pinjaman</string>
+    <string name="perkiraan_omzet_harga_jual_pendapatan_kotor">Perkiraan Omzet/Harga Jual/Pendapatan Kotor</string>
+    <string name="perkiraan_biaya_produksi_hpp_modal_yang_telah_dikeluarkan">Perkiraan Biaya Produksi / HPP / Modal yang Telah Dikeluarkan</string>
+    <string name="perkiraan_pendapatan_bersih">Perkiraan Pendapatan Bersih</string>
+    <string name="siklus_usaha_produksi">Siklus Usaha Produksi</string>
+    <string name="nominal_pinjaman">Nominal Pinjaman</string>
+    <string name="terbilang">Terbilang</string>
+    <string name="masukan_terbilang">Masukan terbilang</string>
+    <string name="jangka_waktu">Jangka Waktu</string>
+    <string name="nominal_angsuran">Nominal Angsuran</string>
+    <string name="empty">-</string>
+    <string name="rp_500_000">Rp 500,000</string>
+    <string name="rp">Rp</string>
+    <string name="rp_1_000_000">Rp 1,000,000</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="bulan">Bulan</string>
+    <string name="_36">36</string>
+    <string name="komoditas_usaha_ps">Komoditas Usaha PS</string>
+    <string name="lama_usaha">Lama Usaha</string>
+
+    <!--Jaminan-->
+    <string name="tambah_jaminan">Tambah Jaminan</string>
+    <string name="bentuk_jaminan">Bentuk Jaminan</string>
+    <string name="pilih_bentuk_jaminan">Masukkan Bentuk Jaminan</string>
+    <string name="nilai_jaminan">Nilai Jaminan</string>
+    <string name="upload_bukti_jaminan">Upload Bukti Jaminan</string>
+    <string name="pohon">Pohon</string>
+    <string name="rp_3_000_000">Rp 3,000,000</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="masukan_dibuat_pada_tempat">Masukan dibuat pada (tempat)</string>
+    <string name="persetujuan_permohonan">Demikian permohonan, segala isi dan pernyataan yang terdapat pada formulir ini kami buat dengan sebenar-benarnya tanpa ada paksaan dari suatu apapun.</string>
+    <string name="wajib_upload_bukti_jaminan">Wajib Upload Bukti Jaminan</string>
+    <string name="wajib_menyetujui_pernyataan">Wajib Menyetujui Pernyataan</string>
+
+    <!--    Registrasi kelompok-->
+    <string name="hint_nama_narahubung">Masukkan nama narahubung</string>
+    <string name="nik_narahubung">NIK Narahubung</string>
+    <string name="hint_nik_narahubung">Masukkan NIK narahubung</string>
+    <string name="text_email_narahubung">Email Narahubung</string>
+    <string name="hint_email_narahubung">Masukkan email narahubung</string>
+    <string name="hint_jabatan">Masukkan jabatan</string>
+    <string name="hint_telepon">Masukkan telepon</string>
+    <string name="text_kata_sandi">Kata Sandi</string>
+    <string name="hint_kata_sandi">Masukkan kata sandi</string>
+    <string name="text_konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="hint_konfirmasi_kata_sandi">Ulangi kata sandi</string>
+    <string name="text_daftar">Daftar</string>
+    <string name="text_perhutanan_sosial">Perhutanan Sosial</string>
+    <string name="text_non_perhutanan_sosial">Non Perhutanan Sosial</string>
+
+    <!--Jenis Layanan-->
+    <string name="pilih_jenis_layanan">Pilih Jenis Layanan</string>
+    <string name="hasil_hutan_bukan_kayu">Hasil Hutan\n Bukan Kayu</string>
+    <string name="tunda_tebang">Tunda Tebang</string>
+    <string name="komoditas_non_kehutanan">Komoditas Non\n Kehutanan</string>
+    <string name="pilih">Pilih</string>
+
+    <!--Formulir Pembiayaan Non Perhutanan Sosial-->
+    <string name="formulir_permohonan">Formulir Permohonan</string>
+    <string-array name="pembiayaan_non_perhutanan_description">
+        <item>Data Permohonan</item>
+        <item>Usaha yang Dibiayai</item>
+        <item>Data Jaminan</item>
+        <item>Dokumen Penguasaan Lahan</item>
+    </string-array>
+    <string-array name="lama_usaha">
+        <item>Bulan</item>
+        <item>Tahun</item>
+    </string-array>
+    <string-array name="siklus_usaha">
+        <item>Mingguan</item>
+        <item>Bulanan</item>
+    </string-array>
+    <string-array name="skema_pembiayaan">
+        <item>Revolving</item>
+        <item>Non Revolving</item>
+    </string-array>
+
+    <!--Data Permohonan-->
+    <string name="jenis_layanan">Jenis Layanan</string>
+    <string name="nominal_permohonan">Nominal Permohonan</string>
+    <string name="skema_pembiayaan">Skema Pembiayaan</string>
+    <string name="rencana_jaminan">Rencana Jaminan</string>
+    <string name="masukan_rencana_jaminan">Masukan rencana jaminan</string>
+
+    <!--Usaha yang Dibiayai-->
+    <string name="jenis_usaha">Jenis Usaha</string>
+    <string name="pilih_jenis_usaha">Pilih Jenis Usaha</string>
+    <string name="masukan_komoditas_usaha">Masukan komoditas usaha</string>
+    <string name="komoditas_usaha">Komoditas Usaha</string>
+    <string name="produktivitas_hasil_panen_terakhir">Produktivitas/Hasil Panen Terakhir</string>
+    <string name="masukan_produktivitas_hasil_panen_terakhir">Masukan produktivitas/hasil panen terakhir</string>
+    <string name="harga_penjualan_terakhir">Harga (Penjualan Terakhir)</string>
+    <string name="masukan_harga_penjualan_terakhir">Masukan harga (penjualan terakhir)</string>
+    <string name="luas_lahan_yang_digarap_m2">Luas Lahan yang Digarap (M2)</string>
+    <string name="masukan_luas_lahan_yang_digarap_m2">Masukan luas lahan yang digarap (M2)</string>
+    <string name="omzet_usaha">Omzet Usaha</string>
+    <string name="hpp_modal">HPP/Modal</string>
+    <string name="pendapatan_bersih">Pendapatan Bersih</string>
+    <string name="tipe_usaha">Tipe Usaha</string>
+    <string name="dikelola_sendiri">Dikelola Sendiri</string>
+    <string name="siklus_usaha">Siklus Usaha</string>
+    <string name="masukan_siklus_usaha">Masukan siklus usaha</string>
+    <string name="kuantitas_komoditas_yang_sudah_ada">Kuantitas Komoditas yang Sudah Ada</string>
+    <string name="masukan_kuantitas_komoditas_yang_sudah_ada">Masukan kuantitas komoditas yang sudah ada</string>
+    <string name="rencana_penggunaan_dana_pinjaman">Rencana Penggunaan Dana Pinjaman</string>
+    <string name="masukan_rencana_penggunaan_dana_pinjaman">Masukan rencana penggunaan dana pinjaman</string>
+    <string name="tujuan_pengajuan_pinjaman">Tujuan Pengajuan Pinjaman</string>
+    <string name="masukan_tujuan_pengajuan_pinjaman">Tujuan Pengajuan Pinjaman</string>
+    <string name="dikelola_orang_lain">Dikelola Orang Lain</string>
+    <string name="untuk_modal_kerja">Untuk Modal Kerja</string>
+    <string name="untuk_investasi">Untuk Investasi</string>
+    <string name="jelaskan_tujuan_pengajuan_pinjaman_anda">Jelaskan Tujuan Pengajuan Pinjaman Anda</string>
+    <string name="masukan_jelaskan_tujuan_pengajuan_pinjaman_anda">Masukan Jelaskan Tujuan Pengajuan Pinjaman Anda</string>
+    <string name="tujuan_pengajuan_pinjaman_anggota">Tujuan Pengajuan Pinjaman Anggota</string>
+    <string name="masukan_tujuan_pengajuan_pinjaman_anggota">Masukan tujuan pengajuan pinjaman anggota</string>
+    <string name="detail_tujuan_pengajuan_pinjaman_anggota">Detail Tujuan Pengajuan Pinjaman Anggota</string>
+    <string name="masukan_detail_tujuan_pengajuan_pinjaman_anggota">Masukan detail tujuan pengajuan pinjaman anggota</string>
+
+    <!--Usaha yang Dibiayai - Hasil Hutan Bukan Kayu-->
+    <string name="komoditas_hhbk">Komoditas HHBK</string>
+    <string name="pilih_komoditas_hhbk">Pilih komoditas HHBK</string>
+    <string name="jenis_kegiatan_pengelolaan">Jenis Kegiatan Pengelolaan</string>
+    <string name="masukan_jenis_kegiatan_pengelolaan">Masukan jenis kegiatan pengelolaan</string>
+    <string name="sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm">Sumber Bahan Baku HHBK dan Lokasi On-Farm/Off-Farm</string>
+    <string name="masukan_sumber_bahan_baku_hhbk_dan_lokasi_on_farm_off_farm">Masukan Sumber Bahan Baku HHBK dan Lokasi On-Farm/Off-Farm</string>
+    <string name="harga_jual_terakhir_per_kg_liter">Harga Jual Terakhir Per KG/Liter</string>
+    <string name="laporan_laba_rugi">Laporan Laba Rugi</string>
+    <string name="wajib_upload_laporan_laba_rugi">Wajib Upload Laporan Laba Rugi</string>
+
+    <!--Usaha yang Dibiayai - Komoditas Non Kehutanan-->
+    <string name="jenis_usaha_non_kehutanan">Jenis Usaha Non Kehutanan</string>
+    <string name="masukan_jenis_usaha_non_kehutanan">Masukan jenis usaha non kehutanan</string>
+    <string name="harga_jual_terakhir">Harga Jual Terakhir</string>
+
+    <!--Data Jaminan-->
+    <string name="data_jaminan">Data Jaminan</string>
+    <string name="bisa_upload_lebih_dari_satu">Bisa Upload Lebih Dari Satu</string>
+    <string name="xls_xlsx_up_to_10mb">XLS, XSLX up to 10MB</string>
+    <string name="ukuran_file">200 KB</string>
+    <string name="ganti_data">Ganti Data</string>
+    <string name="jaminan_tambahan">Jaminan Tambahan</string>
+    <string name="wajib_upload_data_jaminan">Wajib Upload Data Jaminan</string>
+
+    <!--Dokumen Lahan-->
+    <string name="dokumen_ijin_penguasaan_lahan_letter_c_surat_girik_sertifikat_lainnya">Dokumen Ijin Penguasaan Lahan (Letter C/Surat Girik/Sertifikat/Lainnya)</string>
+    <string name="dokumen_pendukung_penguasaan_lahan_surat_keterangan_riwayat_tanah">Dokumen Pendukung Penguasaan Lahan (Surat Keterangan Riwayat Tanah)</string>
+    <string name="dokumen_pendukung_penguasaan_lahan_surat_pernyataan_jual_beli_hibah_waris">Dokumen Pendukung Penguasaan Lahan (Surat Pernyataan Jual Beli/Hibah/Waris)</string>
+    <string name="dokumen_pendukung_penguasaan_lahan_sppt">Dokumen Pendukung Penguasaan Lahan (SPPT)</string>
+    <string name="foto_lahan_debitur">Foto Lahan Debitur</string>
+    <string name="deskripsi_konfirmasi_tunda_tebang">Segala isi dan pernyataan yang terdapat pada formulir ini kami buat dengan sebenar-benarnya tanpa ada paksaan dari suatu apapun dan bertanggung jawab apabila data disebutkan diatas tidak benar adanya.</string>
+    <string name="wajib_upload_ijin_lahan">Wajib Upload Ijin Lahan</string>
+    <string name="wajib_upload_surat_tanah">Wajib Upload Surat Tanah</string>
+    <string name="wajib_upload_surat_jual_beli">Wajib Upload Surat Jual Beli</string>
+    <string name="wajib_upload_sppt">Wajib Upload SPPT</string>
+    <string name="wajib_upload_foto_lahan">Wajib Upload Foto Lahan</string>
+
+    <!-- Formulir pendaftaran kelompok non sosial-->
+    <string name="form_permohonan_non_sosial_text_stepper">%1s dari 4</string>
+    <string name="form_permohonan_non_sosial_data_permohonan">Data permohonan</string>
+    <string name="form_permohonan_non_sosial_usaha_yang_dibiayai">Usaha yang Dibiayai</string>
+    <string name="form_permohonan_non_sosial_data_jaminan">Data Jaminan</string>
+    <string name="form_permohonan_non_sosial_dokumen_penguasaan_lahan">Dokumen Penguasaan Lahan</string>
+    <string name="form_permohonan_non_sosial_jangka_waktu">Jangka Waktu (Tahun)</string>
+    <string name="form_permohonan_non_sosial_jangka_waktu_hint">-</string>
+    <string name="form_permohonan_non_sosial_skema_pembiayaan_hint">Revolving/Non Revolving</string>
+    <string name="form_permohonan_non_sosial_luas_layanan_yang_digarap">Luas Lahan yang Digarap (M2)</string>
+    <string name="form_permohonan_non_sosial_luas_layanan_yang_digarap_hint">Masukan luas lahan yang digarap (M2)</string>
+    <string name="form_permohonan_non_sosial_harga_jual_kg">Harga Jual Terakhir per KG/Liter</string>
+
+
+</resources>

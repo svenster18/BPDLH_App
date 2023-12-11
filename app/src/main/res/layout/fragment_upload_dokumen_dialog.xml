@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/BottomSheetDialogTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/modal_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:background="@color/white"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_upload_dokumen"
+                style="@style/TextMD.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/upload_dokumen_lainnya"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+                app:layout_constraintStart_toEndOf="@+id/btn_close"
+                app:layout_constraintTop_toTopOf="@+id/btn_close" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/gray_100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_upload_dokumen" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:text="@string/nama_dokumen_lainnya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_NamaDokumen"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_NamaDokumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_nama_dokumen_lainnya" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:text="@string/dokumen_lainnya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_NamaDokumen" />
+
+        <include
+            android:id="@+id/cv_upload_dokumen"
+            layout="@layout/fragment_upload_file" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_batal"
+                style="@style/Button.Outline.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_small"
+                android:layout_marginBottom="@dimen/base_margin_medium"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/base_margin_medium"
+                android:text="@string/batal"
+                android:textAppearance="@style/TextSM.SemiBold"
+                android:textColor="@color/gray_700"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_upload_dokumen" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/Button.Primary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_small"
+                android:layout_marginTop="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/base_margin_medium"
+                android:paddingRight="@dimen/base_margin_medium"
+                android:text="@string/btn_submit"
+                android:textAppearance="@style/TextSM.SemiBold.3"
+                app:cornerRadius="@dimen/base_margin_small"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_batal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/btn_batal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

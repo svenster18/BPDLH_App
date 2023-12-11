@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="negative_confirmation">Tidak, Kembali</string>
+    <string name="positive_confirmation">Ya</string>
+    <string name="caution">Perhatian</string>
+    <string name="logout_confirmation">Apa Anda yakin ingin keluar dari akun Anda ?</string>
+
+    <string name="mock_general_pop_info_title">Pop Up Title</string>
+    <string name="mock_general_pop_info_message">Customer gagal diubah, periksa kembali koneksi internet Anda</string>
+    <string name="mock_general_pop_info_button">Coba Lagi</string>
+
+    <string name="warning_title_something_error">Mohon cek koneksi Anda dan coba kembali</string>
+    <string name="warning_no_lat_long">Titik lokasi tidak ditemukan</string>
+    <string name="warning_no_phone_number">Nomor telpon tidak ditemukan</string>
+    <string name="warning_app_not_installed">Aplikasi belum terinstall di perangkat Anda</string>
+    <string name="warning_app_not_found">Aplikasi yang Anda tuju tidak ditemukan</string>
+    <string name="warning_app_is_not_production">Aplikasi belum terinstall di perangkat Anda\ndan tidak dapat diarahkan ke PlayStore. Silakan install aplikasi terkait yang sesuai terlebih dahulu.</string>
+    <string name="button_close">Tutup</string>
+    <string name="text_stepper_step">%1s dari 3</string>
+
+    <string name="masukan_email_nik">Masukan email/NIK Anda</string>
+    <string name="masukan_email">Masukkan Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_nik">Email/NIK</string>
+    <string name="password">Password</string>
+    <string name="masukan_password_anda">Masukan password Anda</string>
+    <string name="formulir_pendaftaran_perorangan">Formulir Pendaftaran Perorangan</string>
+    <string name="jenis_kelompok">Jenis Kelompok</string>
+    <string name="pilih_jenis_kelompok">Pilih jenis kelompok</string>
+    <string name="tanggal_dan_tahun_berdiri">Tanggal dan tahun berdiri</string>
+    <string name="pilih_tanggal_dan_tahun_berdiri">Pilih tanggal dan tahun berdiri</string>
+    <string name="alamat_lengkap">Alamat Lengkap</string>
+    <string name="masukan_alamat_lengkap">Masukkan alamat lengkap</string>
+    <string name="cari">Cari</string>
+    <string name="perkiraan_pendapatan_bulan_tahun">Perkiraan Pendapatan (Bulan/Tahun)</string>
+    <string name="saya_setuju">Saya Setuju</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="alamat_domisili">Alamat Domisili</string>
+    <string name="alamat_sama_dengan_ktp">Alamat Sama Dengan KTP</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="pilih_provinsi">Pilih provinsi</string>
+    <string name="kota_kabupaten">Kota/Kabupaten</string>
+    <string name="pilih_kota_kabupaten">Pilih kota/kabupaten</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="pilih_kecamatan">Pilih Kecamatan</string>
+    <string name="kelurahan">Kelurahan</string>
+    <string name="pilih_kelurahan">Pilih Kelurahan</string>
+    <string name="rt">RT</string>
+    <string name="pilih_rt">Pilih RT</string>
+    <string name="rw">RW</string>
+    <string name="pilih_rw">Pilih RW</string>
+    <string name="pilih_lewat_peta">Pilih Lewat Peta</string>
+    <string name="latitude">Latitude</string>
+    <string name="masukan_latitude">Masukan latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="masukan_longitude">Masukan longitude</string>
+    <string name="berdomisili_di_alamat_diatas_sejak_tahun">Berdomisili di alamat diatas sejak tahun</string>
+    <string name="masukan_berdomisili_di_alamat_diatas_sejak_tahun">Masukan berdomisili di alamat diatas sejak tahun</string>
+    <string name="alamat_ktp">Alamat KTP</string>
+    <string name="pertanyaan">Pertanyaan</string>
+    <string name="_1">1</string>
+    <string name="dari">dari</string>
+    <string name="_10">10</string>
+    <string name="apa_usaha_utama_penghidupan_sehari_hari_dari_calon_pemohon">Apa usaha utama penghidupan sehari-hari dari calon pemohon?</string>
+    <string name="a_lorem_ipsum">A. Lorem Ipsum</string>
+    <string name="b_lorem_ipsum">B. Lorem Ipsum</string>
+    <string name="c_lorem_ipsum">C. Lorem Ipsum</string>
+    <string name="d_lorem_ipsum">D. Lorem Ipsum</string>
+    <string name="nama_kelompok">Nama Kelompok</string>
+    <string name="nik">NIK</string>
+    <string name="bullet">*</string>
+    <string name="masukan_nik">Masukan NIK</string>
+    <string name="ktp">KTP</string>
+    <string name="klik_untuk_upload">Klik untuk upload</string>
+    <string name="png_jpg_pdf_docx_up_to_10mb">PNG, JPG, PDF, Docx up to 10MB</string>
+    <string name="nama_lengkap_sesuai_ktp">Nama Lengkap Sesuai KTP</string>
+    <string name="masukan_nama_lengkap_sesuai_ktp">Masukan nama lengkap sesuai KTP</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="pilih_tanggal_lahir">Pilih tanggal lahir</string>
+    <string name="tempat_lahir">Tempat Lahir</string>
+    <string name="masukan_tempat_lahir">Masukan tempat lahir</string>
+    <string name="batas_akhir_kepengurusan">Batas Akhir Kepengurusan</string>
+    <string name="pilih_batas_akhir_kepengurusan">Pilih batas akhir kepengurusan</string>
+    <string name="no_kartu_keluarga">No Kartu Keluarga</string>
+    <string name="masukan_no_kartu_keluarga">Masukan no kartu keluarga</string>
+    <string name="kartu_keluarga">Kartu Keluarga</string>
+    <string name="pekerjaan_utama">Pekerjaan Utama</string>
+    <string name="masukan_pekerjaan_utama">Masukan pekerjaan utama</string>
+    <string name="pekerjaan_usaha_lainnya">Pekerjaan/Usaha Lainnya</string>
+    <string name="masukan_pekerjaan_usaha_lainnya">Masukan pekerjaan/usaha lainnya</string>
+    <string name="tanggal_lahir_pasangan">Tanggal Lahir Pasangan</string>
+    <string name="pilih_tanggal_lahir_pasangan">Pilih Tanggal Lahir Pasangan</string>
+    <string name="tempat_lahir_pasangan">Tempat Lahir Pasangan</string>
+    <string name="masukan_tempat_lahir_pasangan">Masukan Tempat Lahir Pasangan</string>
+    <string name="pendapatan_selain_dari_usaha_pekerjaan_lainnya">Pendapatan selain dari usaha/pekerjaan lainnya</string>
+    <string name="tambah_usaha_lain">Tambah Usaha Lain</string>
+    <string name="jenis_usaha_pekerjaan_lainnya">Jenis Usaha/Pekerjaan Lainnya</string>
+    <string name="masukkan_nilai_jaminan">Masukkan Nilai Jaminan</string>
+    <string name="perkiraan_pendapatan">Perkiraan Pendapatan</string>
+    <string name="rp_5_000_000_makan">Rp. 5.000.000/Makan</string>
+    <string name="siklus_pendapatan">Siklus Pendapatan</string>
+    <string name="pengeluaran_rutin_rumah_tangga">Pengeluaran Rutin Rumah Tangga</string>
+    <string name="pengeluaran_rutin_per_bulan">Pengeluaran Rutin Per Bulan</string>
+    <string name="pengeluaran_terbesar">Pengeluaran Terbesar</string>
+    <string name="penggunaan_pengeluaran_terbesar">Penggunaan Pengeluaran Terbesar</string>
+    <string name="biaya_listrik">Biaya Listrik</string>
+    <string name="dokumen_pendukung_pendapatan_slip_gaji_laporan_keuangan_usaha">Dokumen Pendukung Pendapatan (Slip Gaji/Laporan Keuangan Usaha)</string>
+    <string name="upload_dokumen_lainnya">Upload Dokumen Lainnya</string>
+    <string name="dokumen_swafoto_dengan_ktp">Dokumen Swafoto Dengan KTP</string>
+    <string name="dokumen_sk_pembentukan_berita_acara">Dokumen SK Pembentukan / Berita Acara</string>
+    <string name="dokumen_ad_art">Dokumen AD / ART</string>
+    <string name="surat_rekomendasi_penamping">Surat Rekomendasi Pendamping</string>
+    <string name="unduh_dokumen_rujukan">Unduh Dokumen Rujukan</string>
+    <string name="dokumen_foto_rumah_debitur">Dokumen Foto Rumah Debitur</string>
+    <string name="dokumen_foto_usaha_debitur">Dokumen Foto Usaha Debitur</string>
+    <string name="simpan_amp_draft"><![CDATA[Simpan & Draft]]></string>
+    <string name="kembali">Kembali</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="profil">Profil</string>
+    <string name="foto_profil">Foto Profil</string>
+    <string name="hapus">Hapus</string>
+    <string name="ubah">Ubah</string>
+    <string name="ganti_kata_sandi">Ganti Kata Sandi</string>
+    <string name="jawaban">Jawaban</string>
+    <string name="hint_answer">Masukan Jawaban</string>
+    <string name="data_send">Data Sudah Dikirim</string>
+
+    <!-- Registrasi Perorangan -->
+    <string name="label_empty">Wajib diisi</string>
+    <string name="label_nik_not_sixteen">Panjang NIK harus 16 karakter</string>
+    <string name="label_no_kk_not_sixteen">Panjang No KK harus 16 karakter</string>
+    <string name="label_less_than_two">Panjang minimal 2 karakter</string>
+    <string name="label_special_blank">Tidak boleh hanya berisi spasi atau karakter khusus</string>
+    <string name="label_more_than_fifty">Panjang maksimal 50 karakter</string>
+    <string name="label_more_than_250">Panjang maksimal 250 karakter</string>
+    <string name="label_date_format">Format tanggal %s</string>
+    <string name="label_year_format">Format tahun YYYY</string>
+    <string name="registrasi_text_stepper_step">%1s dari 5</string>
+
+    <!--  General Confirmation Bottom Sheet  -->
+    <string name="tidak">Tidak</string>
+    <string name="iya_simpan_draft">Iya, Simpan Draft</string>
+    <string name="anda_yakin_akan_menyimpan_ini_sebagai_draft">Anda yakin akan menyimpan ini sebagai draft?</string>
+    <string name="setelah_anda_menyimpan_sebagai_draft_anda_masih_bisa_melanjutkannya">Setelah anda menyimpan sebagai draft anda masih bisa melanjutkannya.</string>
+
+    <!--    Upload File Fragment-->
+    <string name="text_file_name">foto_usaha_debitur.jpg</string>
+    <string name="dummy_file_size">200 KB</string>
+    <string name="ganti_data">Ganti Data</string>
+    <string name="file_maksimal">File Maksimal 10 MB</string>
+    <string name="percentage">10%</string>
+
+    <!--Edit Account-->
+    <string name="label_email_wrong_format">Harap masukkan format Alamat Email yang sesuai</string>
+
+    <!--Stepper-->
+    <string name="text_stepper_seven_step">%1s dari 7</string>
+    <string name="text_stepper_four_step">%1s dari 4</string>
+
+    <!--Phone Number -->
+    <string name="label_phone_number_under">Panjang No Telp minimal 8 digit</string>
+    <string name="label_phone_number_upper">Panjang No Telp maksimak 15 digit</string>
+
+<!--   password -->
+    <string name="label_pass_less_then_eight">Panjang password minimal 8 karakter</string>
+    <string name="label_pass_not_same">Password tidak sama</string>
+    <string name="request_password_title_success">Pengajuan Berhasil</string>
+    <string name="request_password_description_success">Mohon cek email Anda, terdapat tautan untuk mengatur ulang kata sandi Anda</string>
+    <string name="update_password_title_success">Kata Sandi anda berhasil di ubah!</string>
+
+    <!--Success BottomSheet-->
+    <string name="berhasil">Berhasil</string>
+    <string name="berhasil_content">Mohon cek email Anda, terdapat tautan untuk mengatur ulang kata sandi anda</string>
+
+</resources>

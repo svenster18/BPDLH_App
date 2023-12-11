@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".FormStep7Fragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tambah_jaminan"
+            style="@style/TextSM.SemiBold.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:backgroundTint="@color/secondary_orange_600"
+            android:text="@string/tambah_jaminan"
+            app:cornerRadius="@dimen/card_radius"
+            app:icon="@drawable/ic_plus"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tambah_jaminan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tambah_jaminan"
+            tools:listitem="@layout/item_tambah_jaminan" />
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:background="@color/gray_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_tambah_jaminan" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/dibuat_pada_tanggal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_dibuat_pada_tanggal"
+            style="@style/TextInputLayout.Calendar"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_dibuat_pada_tanggal"
+                style="@style/TextInputEditText.Calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/dd_mm_yyyy" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_8"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/dibuat_pada_tempat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_dibuat_pada_tanggal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_dibuat_pada_tempat"
+            style="@style/TextInputLayout"
+            android:enabled="true"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_large_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_dibuat_pada_tempat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_dibuat_pada_tempat"
+                android:maxLength="50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_konfirmasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:layout_marginBottom="@dimen/base_margin_xlarge_40"
+            app:cardBackgroundColor="@color/primary_main_color_50"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_dibuat_pada_tempat"
+            app:strokeColor="@color/primary_main_color_50">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    style="@style/CheckBox"
+                    android:checked="false"
+                    android:paddingStart="@dimen/base_padding_small"
+                    android:text="@string/saya_setuju"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/TextXS.Regular"
+                    android:layout_width="@dimen/match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_large_30"
+                    android:layout_marginBottom="@dimen/base_margin_medium"
+                    android:text="@string/persetujuan_permohonan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

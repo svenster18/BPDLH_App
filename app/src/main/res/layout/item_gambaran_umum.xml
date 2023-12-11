@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/base_margin_small"
+    android:layout_marginBottom="@dimen/base_margin_small"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_kategori"
+            style="@style/TextSM.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            android:text="@string/text_kategori_usaha" />
+
+        <TextView
+            android:id="@+id/tv_kegiatan_value"
+            style="@style/TextMD.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_small_12"
+            tools:text="Kategori" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            style="@style/TextSM.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:text="@string/text_deskripsi" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_value"
+            style="@style/TextMD.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_medium"
+            tools:text="Deskripsi" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_height"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/gray_300" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            style="@style/FdbButton.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin_medium"
+            android:text="@string/ubah"
+            app:icon="@drawable/ic_edit"
+            app:iconGravity="textStart"
+            app:iconTint="@color/gray_700" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

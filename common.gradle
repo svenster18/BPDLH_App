@@ -1,0 +1,92 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('gradle.properties').newDataInputStream())
+
+android {
+    compileSdkVersion rootProject.ext.appCompileSdk
+    buildToolsVersion rootProject.ext.appBuildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.appMinimumSdk
+        targetSdkVersion rootProject.ext.appTargetSdk
+        buildConfigField "String", 'VERSION', "\"${generateVersionName()}\""
+        buildConfigField "String", "USERNAME", USERNAME
+        buildConfigField "String", "PASSWORD", PASSWORD
+    }
+
+    buildTypes {
+        debug {
+            manifestPlaceholders
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.navScheme = NAV_SCHEME_DEV
+            manifestPlaceholders.hostUrlScheme = HOST_SCHEME_DEV
+            buildConfigField "String", "PREFS_NAME", PREFERENCE_NAME_DEV
+            buildConfigField "String", "BASE_URL", BASE_URL_DEV
+            buildConfigField "String", "BASE_URL_IDENTITY", BASE_URL_IDENTITY_DEV
+            buildConfigField "String", "BASE_URL_FILE_SERVICE", BASE_URL_FILE_SERVICE_DEV
+            buildConfigField "String", 'NAV_SCHEME', "\"$NAV_SCHEME_DEV\""
+            buildConfigField "String", 'HOST_SCHEME_URL', "\"$HOST_SCHEME_DEV\""
+            buildConfigField "String", "BASE_URL_API_MASTER", BASE_URL_API_MASTER_DEV
+        }
+        staging {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.navScheme = NAV_SCHEME_STAGE
+            manifestPlaceholders.hostUrlScheme = HOST_SCHEME_STAGE
+            buildConfigField "String", "PREFS_NAME", PREFERENCE_NAME_STAGE
+            buildConfigField "String", "BASE_URL", BASE_URL_STAGE
+            buildConfigField "String", "BASE_URL_IDENTITY", BASE_URL_IDENTITY_STAGE
+            buildConfigField "String", "BASE_URL_FILE_SERVICE", BASE_URL_FILE_SERVICE_STAGE
+            buildConfigField "String", 'NAV_SCHEME', "\"$NAV_SCHEME_STAGE\""
+            buildConfigField "String", 'HOST_SCHEME_URL', "\"$HOST_SCHEME_STAGE\""
+            buildConfigField "String", "BASE_URL_API_MASTER", BASE_URL_API_MASTER_STAGE
+        }
+        release {
+            minifyEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.navScheme = NAV_SCHEME
+            manifestPlaceholders.hostUrlScheme = HOST_SCHEME_PROD
+            buildConfigField "String", "PREFS_NAME", PREFERENCE_NAME_PROD
+            buildConfigField "String", "BASE_URL", BASE_URL_PROD
+            buildConfigField "String", "BASE_URL_IDENTITY", BASE_URL_IDENTITY_PROD
+            buildConfigField "String", "BASE_URL_FILE_SERVICE", BASE_URL_FILE_SERVICE_PROD
+            buildConfigField "String", 'NAV_SCHEME', "\"$NAV_SCHEME\""
+            buildConfigField "String", 'HOST_SCHEME_URL', "\"$HOST_SCHEME_PROD\""
+            buildConfigField "String", "BASE_URL_API_MASTER", BASE_URL_API_MASTER_PROD
+        }
+
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig = true
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation androidDependencies.values()
+    implementation utilsDependencies.values()
+    implementation firebaseDependencies.values()
+    implementation retrofitDependencies.values()
+    implementation rxJavaAndroidDependencies.values()
+    implementation okHttpDependencies.values()
+    implementation daggerDependencies.values()
+    implementation roomDependencies.values()
+
+    kapt daggerKaptDependencies.values()
+    kapt deepLinkKaptDependencies.values()
+    kapt roomKaptDependencies.values()
+}

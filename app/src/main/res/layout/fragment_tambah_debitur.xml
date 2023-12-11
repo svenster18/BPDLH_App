@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tambah_debitur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/white"
+            app:srcCompat="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:contentDescription="@string/button_close" />
+
+        <TextView
+            android:id="@+id/tv_tambah_debitur"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:text="@string/text_tambah_debitur"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_close"
+            app:layout_constraintTop_toTopOf="@+id/btn_close" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/gray_100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tambah_debitur" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/base_margin_xlarge_40"
+            android:layout_height="@dimen/base_margin_mini"
+            android:background="@color/gray_200"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:clipChildren="true"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_medium"
+                    android:text="@string/text_nama_debitur"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_nama_debitur"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nama_debitur"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/text_hint_masukkan_nama_debitur" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/nik"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_nama_debitur" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_nik"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nik"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:maxLength="16"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/nik" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/text_tanggal_dan_tahun_lahir"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_nik" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_tanggal_lahir"
+                    style="@style/TextInputLayout.Calendar"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_tanggal_lahir"
+                        style="@style/TextInputEditText.Calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:imeOptions="actionNext"
+                        android:ems="10"
+                        android:hint="@string/text_hint_pilih_tanggal_dan_tahun_lahir" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/email_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_tanggal_lahir" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_email"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="true"
+                        android:inputType="textEmailAddress"
+                        android:imeOptions="actionNext"
+                        android:ems="10"
+                        android:hint="@string/email_label" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_6"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/text_no_telepon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_email" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_no_telepon"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_telepon"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="true"
+                        android:inputType="phone"
+                        android:imeOptions="actionDone"
+                        android:maxLength="15"
+                        android:ems="10"
+                        android:hint="@string/text_no_telepon" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_jenis_kelamin"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:layout_marginHorizontal="@dimen/base_margin_medium"
+                    android:text="@string/jenis_kelamin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_no_telepon"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_jenis_kelamin"
+                    style="@style/TextInputLayout.DropDown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_jenis_kelamin"
+                    android:layout_marginTop="@dimen/base_margin_small">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_jenis_kelamin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/jenis_kelamin_hint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_nilai_permohonan"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:visibility="gone"
+                    android:text="@string/nilai_permohonan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_jenis_kelamin" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_nilai_permohonan"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nilai_permohonan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nilai_permohonan"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/rp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_jenis_layanan"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:visibility="gone"
+                    android:text="@string/jenis_layanan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_nilai_permohonan" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_jenis_layanan"
+                    style="@style/TextInputLayout.DropDown"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_jenis_layanan">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_jenis_layanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/text_jenis_layanan_hint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_tujuan_pengajuan"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/tujuan_pengajuan_pinjaman_anggota"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_jenis_layanan" />
+
+                <RadioGroup
+                    android:id="@+id/radio_tujuan_pengajuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tujuan_pengajuan"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginEnd="@dimen/base_margin_medium">
+
+                    <RadioButton
+                        android:id="@+id/radio_untuk_modal_kerja"
+                        style="@style/RadioButton"
+                        android:layout_marginTop="@dimen/base_margin_mini"
+                        android:text="@string/untuk_modal_kerja"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_untuk_inventasi"
+                        style="@style/RadioButton"
+                        android:layout_marginTop="@dimen/base_margin_mini"
+                        android:text="@string/untuk_investasi"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tv_detail_tujuan_pengajuan"
+                    style="@style/TextSM.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginTop="@dimen/base_margin_large_20"
+                    android:text="@string/detail_tujuan_pengajuan_pinjaman_anggota"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_tujuan_pengajuan"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_detail_tujuan_pengajuan"
+                    style="@style/TextInputLayout"
+                    android:layout_marginTop="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tujuan_pengajuan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_detail_tujuan_pengajuan"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:inputType="textMultiLine"
+                        android:gravity="top|start"
+                        android:layout_weight="1"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:ems="10"
+                        android:hint="@string/masukan_detail_tujuan_pengajuan_pinjaman_anggota" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_batal"
+                    style="@style/FdbButton.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/batal"
+                    android:layout_marginTop="@dimen/base_margin_large_32"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginEnd="@dimen/base_margin_small"
+                    android:layout_marginBottom="@dimen/base_margin_xlarge_40"
+                    app:layout_constraintTop_toBottomOf="@id/til_detail_tujuan_pengajuan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_tambah"/>
+
+                <Button
+                    android:id="@+id/btn_tambah"
+                    style="@style/FdbButton.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_tambah"
+                    android:layout_marginStart="@dimen/base_margin_small"
+                    android:layout_marginEnd="@dimen/base_margin_medium"
+                    app:layout_constraintTop_toTopOf="@id/btn_batal"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_batal"
+                    app:layout_constraintStart_toEndOf="@id/btn_batal"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

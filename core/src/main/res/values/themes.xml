@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FDB" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="textInputStyle">@style/TextInputLayout</item>
+        <item name="colorPrimary">@color/primary_main_color_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+    </style>
+
+    <style name="Theme.FDB" parent="Base.Theme.FDB" />
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <!--    temp theme. Hanya dipakai di kelas template bawaan-->
+
+    <style name="AppTheme" parent="Theme.FDB" />
+
+    <style name="AppTheme.ProgressBar" parent="Theme.FDB">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.DatePicker" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.FDB">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+    <!--   temp theme -->
+
+</resources>

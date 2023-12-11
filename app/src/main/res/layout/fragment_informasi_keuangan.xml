@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/base_padding_large"
+        android:paddingBottom="@dimen/base_margin_xlarge_40">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSM.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/pendapatan_selain_dari_usaha_pekerjaan_lainnya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tambah_usaha_lain"
+            style="@style/TextSM.SemiBold.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/secondary_orange_600"
+            android:text="@string/tambah_usaha_lain"
+            app:cornerRadius="@dimen/base_margin_small"
+            app:icon="@drawable/ic_plus"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_usaha_lain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            tools:listitem="@layout/item_usaha_lain" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/pengeluaran_rutin_rumah_tangga"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_siklus_pendapatan_akhir" />
+
+        <TextView
+            android:id="@+id/tv_6"
+            style="@style/TextSM.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/pengeluaran_rutin_per_bulan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_pengeluaran_rutin"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_pengeluaran_rutin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_7"
+            style="@style/TextSM.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/pengeluaran_terbesar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_pengeluaran_rutin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_pengeluaran_terbesar"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_pengeluaran_terbesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_8"
+            style="@style/TextSM.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/penggunaan_pengeluaran_terbesar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_pengeluaran_terbesar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_penggunaan_pengeluaran_terbesar"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_penggunaan_pengeluaran_terbesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/biaya_listrik" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_9"
+            style="@style/TextSM.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/dokumen_pendukung_pendapatan_slip_gaji_laporan_keuangan_usaha"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_penggunaan_pengeluaran_terbesar" />
+
+        <include
+            android:id="@+id/cv_dokumen_pendukung"
+            layout="@layout/fragment_upload_file"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

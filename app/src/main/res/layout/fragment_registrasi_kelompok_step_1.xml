@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/base_margin_medium">
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_kelompok"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama_kelompok"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nama_kelompok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_masukkan_nama_kelompok"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:text="@string/jenis_kelompok"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jenis_kelompok"
+                style="@style/TextInputLayout.DropDown"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edt_jenis_kelompok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/pilih_jenis_kelompok"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/TextSM.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_dasar_persetujuan_berita_acara"
+                android:layout_marginHorizontal="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dasar_persetujuan"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dasar_persetujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_masukkan"
+                    android:layout_weight="1"
+                    android:maxLines="5"
+                    android:minLines="3"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:id="@+id/ll_alamat"
+                layout="@layout/fragment_alamat_ktp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/base_margin_mini"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/base_margin_medium"
+        android:paddingTop="@dimen/base_margin_medium"
+        android:paddingBottom="@dimen/base_margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/FdbButton.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selanjutnya" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

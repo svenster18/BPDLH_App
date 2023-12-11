@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "552269995799",
+    "project_id": "bpdlh-fdb",
+    "storage_bucket": "bpdlh-fdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552269995799:android:922a81858025b4d5926152",
+        "android_client_info": {
+          "package_name": "id.bpdlh.fdb.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552269995799-usc6n2c52pmsc7t97jhog5alg7u4f4oc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcogOpIZMik3ZNpwstH4XVWJCaDb5tEwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552269995799-usc6n2c52pmsc7t97jhog5alg7u4f4oc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

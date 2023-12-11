@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginHorizontal="@dimen/base_margin_medium"
+    android:layout_marginTop="@dimen/base_margin_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingVertical="@dimen/base_margin_medium">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/base_margin_xlarge_40"
+            android:layout_height="@dimen/base_margin_xlarge_40"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user_circle" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small_12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_icon"
+            tools:text="John Doe" />
+
+        <ImageView
+            android:id="@+id/iv_dotted"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon"
+            app:srcCompat="@drawable/ic_dotted_line" />
+
+        <TextView
+            android:id="@+id/tv_jenis_layanan"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:visibility="gone"
+            android:text="@string/text_jenis_layanan"
+            app:layout_constraintStart_toStartOf="@id/iv_dotted"
+            app:layout_constraintTop_toBottomOf="@id/iv_dotted" />
+
+        <TextView
+            android:id="@+id/tv_jenis_layanan_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gray_50_rounded"
+            android:visibility="gone"
+            android:padding="@dimen/base_margin_mini"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_jenis_layanan"
+            tools:text="Tunda Terbang" />
+
+        <TextView
+            android:id="@+id/tv_nik"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nik"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            app:layout_constraintStart_toStartOf="@id/tv_jenis_layanan"
+            app:layout_constraintTop_toBottomOf="@id/tv_jenis_layanan" />
+
+        <TextView
+            android:id="@+id/tv_nik_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@id/iv_dotted"
+            app:layout_constraintStart_toEndOf="@id/tv_nik"
+            app:layout_constraintTop_toTopOf="@id/tv_nik"
+            tools:text="1234567890" />
+
+        <TextView
+            android:id="@+id/tv_tanggal_lahir"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tanggal_lahir"
+            app:layout_constraintStart_toStartOf="@id/iv_dotted"
+            app:layout_constraintTop_toBottomOf="@id/tv_nik" />
+
+        <TextView
+            android:id="@+id/tv_tanggal_lahir_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@id/iv_dotted"
+            app:layout_constraintStart_toEndOf="@id/tv_tanggal_lahir"
+            app:layout_constraintTop_toTopOf="@id/tv_tanggal_lahir"
+            tools:text="31 Februari 3029" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_email"
+            app:layout_constraintStart_toStartOf="@id/iv_dotted"
+            app:layout_constraintTop_toBottomOf="@id/tv_tanggal_lahir" />
+
+        <TextView
+            android:id="@+id/tv_email_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@id/iv_dotted"
+            app:layout_constraintStart_toEndOf="@id/tv_email"
+            app:layout_constraintTop_toTopOf="@id/tv_email"
+            tools:text="gmail@johndoe.com" />
+
+        <TextView
+            android:id="@+id/tv_no_telp"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_no_telepon"
+            app:layout_constraintStart_toStartOf="@id/iv_dotted"
+            app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_no_telp_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@id/iv_dotted"
+            app:layout_constraintStart_toEndOf="@id/tv_no_telp"
+            app:layout_constraintTop_toTopOf="@id/tv_no_telp"
+            tools:text="080989999" />
+
+        <TextView
+            android:id="@+id/tv_nilai_permohonan"
+            style="@style/TextSM.Regular.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_nilai_permohonan"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/iv_dotted"
+            app:layout_constraintTop_toBottomOf="@id/tv_no_telp" />
+
+        <TextView
+            android:id="@+id/tv_nilai_permohonan_value"
+            style="@style/TextSM.SemiBold.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/base_margin_mini"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:textAlignment="textEnd"
+            android:visibility="gone"
+            android:background="@drawable/bg_gray_50_rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_nilai_permohonan"
+            tools:text="RP 50.000.000" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/gray_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nilai_permohonan" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/tv_tanggal_disetujui_title"
+            style="@style/TextSM.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_small"
+            android:text="@string/text_tanggal_disetujui"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guide"
+            app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+        <TextView
+            android:id="@+id/tv_tanggal_disetujui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tv_tanggal_disetujui_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_tanggal_disetujui_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_tanggal_disetujui_title"
+            tools:text="31 februari 2033" />
+
+        <TextView
+            android:id="@+id/tv_disetujui_title"
+            style="@style/TextSM.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_disetujui_oleh"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintStart_toEndOf="@id/guide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_tanggal_disetujui_title" />
+
+        <TextView
+            android:id="@+id/tv_disetujui_oleh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="@id/tv_disetujui_title"
+            app:layout_constraintStart_toStartOf="@id/tv_disetujui_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_disetujui_title"
+            tools:text="John Travolta Namanya sangat panjang sekali" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

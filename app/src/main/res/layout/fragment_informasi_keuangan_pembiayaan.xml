@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/base_margin_xlarge_40"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/perkiraan_pendapatan_bulan_tahun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_perkiraan_pendapatan_bulan_tahun"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_perkiraan_pendapatan_bulan_tahun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_siklus_pendapatan"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/siklus_pendapatan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_perkiraan_pendapatan_bulan_tahun" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_siklus_pendapatan_awal"
+            style="@style/TextInputLayout"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_siklus_pendapatan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_siklus_pendapatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_siklus_pendapatan_akhir"
+            style="@style/TextInputLayout.DropDown"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_siklus_pendapatan">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_siklus_pendapatan_akhir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/pengeluaran_rutin_per_bulan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_siklus_pendapatan_akhir" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_pengeluaran_rutin"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_pengeluaran_rutin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/pengeluaran_terbesar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_pengeluaran_rutin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_pengeluaran_terbesar"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_pengeluaran_terbesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/penggunaan_pengeluaran_terbesar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textIL_pengeluaran_terbesar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_penggunaan_pengeluaran_terbesar"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_penggunaan_pengeluaran_terbesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

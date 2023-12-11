@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/base_margin_medium"
+    android:layout_marginTop="@dimen/base_margin_large_20"
+    android:layout_marginEnd="@dimen/base_margin_medium"
+    android:backgroundTint="@color/textfield_background_color"
+    app:cardCornerRadius="@dimen/base_margin_small_12"
+    app:strokeColor="@color/cardview_stroke_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_upload_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/base_padding_large"
+        android:paddingTop="@dimen/base_padding_medium"
+        android:paddingEnd="@dimen/base_padding_large"
+        android:paddingBottom="@dimen/base_padding_medium"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            style="@style/TextSM.Medium.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/base_padding_small_12"
+            android:layout_marginBottom="@dimen/base_padding_small_12"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="@dimen/max_image_height"
+            android:paddingTop="@dimen/base_margin_small_12"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_file_name"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btn_trash_file"
+            android:layout_width="@dimen/base_margin_large_32"
+            android:layout_height="@dimen/base_margin_large_32"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            android:background="@color/white"
+            android:src="@drawable/ic_trash"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_file" />
+
+        <ImageView
+            android:id="@+id/iv_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_featured_icon"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_upload"
+            style="@style/TextSM.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/base_padding_small_12"
+            android:text="@string/klik_untuk_upload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_upload" />
+
+        <TextView
+            android:id="@+id/tv_format"
+            style="@style/TextXS.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_padding_small_4"
+            android:text="@string/png_jpg_pdf_docx_up_to_10mb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_upload" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_preview_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/base_padding_medium"
+        android:paddingTop="@dimen/base_padding_medium"
+        android:paddingEnd="@dimen/base_padding_medium"
+        android:paddingBottom="@dimen/base_padding_medium"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_nama_file_preview"
+            style="@style/TextSM.Medium.2"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/text_file_name" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:src="@drawable/ic_featured_icon_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_file_preview" />
+
+        <TextView
+            android:id="@+id/tv_nama_file"
+            style="@style/TextSM.Medium.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:lines="2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_trash"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            tools:text="@string/text_file_name" />
+
+        <TextView
+            android:id="@+id/tv_size_file"
+            style="@style/TextSM.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama_file"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama_file"
+            tools:text="@string/dummy_file_size" />
+
+        <ProgressBar
+            android:id="@+id/pb_upload_file"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="@dimen/base_margin_mini"
+            android:layout_marginEnd="@dimen/base_margin_small_12"
+            android:layout_marginBottom="@dimen/base_margin_mini_6"
+            android:progress="10"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_percentage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_size_file" />
+
+        <TextView
+            android:id="@+id/tv_percentage"
+            style="@style/TextSM.Medium.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_upload_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pb_upload_file"
+            tools:text="@string/percentage" />
+
+        <ImageButton
+            android:id="@+id/btn_trash"
+            android:layout_width="@dimen/base_margin_large_32"
+            android:layout_height="@dimen/base_margin_large_32"
+            android:background="@color/white"
+            android:src="@drawable/ic_trash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ganti_data"
+            style="@style/TextSM.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/ganti_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_trash" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

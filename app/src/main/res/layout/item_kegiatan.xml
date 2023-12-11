@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/base_margin_medium"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_kategori"
+            style="@style/TextSM.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:text="@string/text_kategori"/>
+
+        <TextView
+            android:id="@+id/tv_kategori_value"
+            style="@style/TextMD.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginBottom="@dimen/base_margin_small_12"
+            android:layout_marginTop="@dimen/base_margin_small"
+            tools:text="Kategori"/>
+
+        <TextView
+            android:id="@+id/tv_kategori_usaha"
+            style="@style/TextSM.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:text="@string/text_kategori_usaha"/>
+
+        <TextView
+            android:id="@+id/tv_kategori_usaha_value"
+            style="@style/TextMD.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginBottom="@dimen/base_margin_small_12"
+            android:layout_marginTop="@dimen/base_margin_small"
+            tools:text="Kategori"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            style="@style/TextSM.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:text="@string/text_deskripsi"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsi_value"
+            style="@style/TextMD.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            android:layout_marginBottom="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            tools:text="Deskripsi"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_height"
+            android:background="@color/gray_300"
+            android:layout_marginTop="@dimen/base_margin_medium"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/btn_data_item"
+                style="@style/FdbButton.Secondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textStart"
+                app:iconTint="@color/gray_800"
+                android:text="@string/ubah"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_small"
+                app:layout_constraintRight_toLeftOf="@+id/btn_trash"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <Button
+                android:id="@+id/btn_trash"
+                style="@style/FdbButton.Icon.Outlined.Red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin_medium"
+                app:icon="@drawable/ic_delete_bin_line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

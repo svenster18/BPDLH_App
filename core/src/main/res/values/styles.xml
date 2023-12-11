@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/base_margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/base_margin_medium</item>
+        <item name="android:textColorHint">@color/gray_400</item>
+        <item name="android:theme">@style/TextInputEditText</item>
+        <item name="boxStrokeColor">@color/textfield_stroke_color</item>
+        <item name="boxStrokeErrorColor">@color/error_500</item>
+        <item name="boxCornerRadiusBottomEnd">6dp</item>
+        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusTopStart">6dp</item>
+        <item name="boxCornerRadiusTopEnd">6dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="TextInputLayout.Password" parent="TextInputLayout">
+        <item name="passwordToggleDrawable">@drawable/image_password</item>
+        <item name="passwordToggleTint">@color/gray_400</item>
+        <item name="passwordToggleEnabled">true</item>
+        <item name="errorIconDrawable">@drawable/image_password</item>
+        <item name="errorIconTint">@color/error_500</item>
+    </style>
+
+    <style name="TextInputLayout.DropDown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/base_margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/base_margin_medium</item>
+        <item name="android:textColorHint">@color/gray_400</item>
+        <item name="android:theme">@style/TextInputEditText</item>
+        <item name="endIconMode">dropdown_menu</item>
+        <item name="endIconDrawable">@drawable/image_dropdown</item>
+        <item name="endIconTint">@color/gray_400</item>
+        <item name="boxStrokeColor">@color/textfield_stroke_color</item>
+        <item name="boxStrokeErrorColor">@color/error_500</item>
+        <item name="boxCornerRadiusBottomEnd">6dp</item>
+        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusTopStart">6dp</item>
+        <item name="boxCornerRadiusTopEnd">6dp</item>
+    </style>
+
+    <style name="TextInputLayout.Calendar" parent="TextInputLayout">
+        <item name="endIconMode">custom</item>
+        <item name="endIconDrawable">@drawable/ic_calendar</item>
+        <item name="endIconTint">@color/gray_400</item>
+        <item name="errorIconDrawable">@drawable/ic_calendar</item>
+    </style>
+
+    <style name="TextInputLayout.Search" parent="TextInputLayout">
+        <item name="android:theme">@style/TextInputEditText.Search</item>
+        <item name="boxStrokeColor">@color/textfield_stroke_color</item>
+        <item name="startIconDrawable">@drawable/ic_search</item>
+        <item name="startIconTint">@color/gray_400</item>
+    </style>
+
+    <style name="CheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/base_margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/base_margin_medium</item>
+        <item name="android:button">@drawable/image_checkbox</item>
+        <item name="android:theme">@style/TextSM.Medium</item>
+        <item name="android:colorAccent">@color/primary_main_color_600</item>
+        <item name="android:textColorSecondary">@color/gray_300</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="buttonTint">@color/primary_main_color_600</item>
+        <item name="android:theme">@style/TextSM.Medium</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="BaseStyleFont">
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextSM.Small" parent="BaseStyleFont">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="TextSM.Regular" parent="BaseStyleFont">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_400</item>
+    </style>
+
+    <style name="TextSM.Regular.2" parent="TextSM.Regular">
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="TextSM.Regular.3" parent="TextSM.Regular">
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <style name="TextSM.Regular.4" parent="TextSM.Regular">
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="TextSM.Medium" parent="BaseStyleFont">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextSM.Medium.2" parent="TextSM.Medium">
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="TextSM.Medium.3" parent="TextSM.Medium">
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="TextSM.Medium.Bold" parent="TextSM.Medium">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextSM.SemiBold" parent="BaseStyleFont">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_main_color_700</item>
+    </style>
+
+    <style name="TextSM.SemiBold.2" parent="TextSM.SemiBold">
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="TextSM.SemiBold.3" parent="TextSM.SemiBold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextSM.SemiBold.4" parent="TextSM.SemiBold">
+        <item name="android:textColor">@color/primary_main_color_600</item>
+    </style>
+
+    <style name="TextSM.SemiBold.5" parent="TextSM.SemiBold">
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="TextSM.SemiBold.6" parent="BaseStyleFont">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/error_700</item>
+    </style>
+
+    <style name="TextSM.SemiBold.7" parent="TextSM.SemiBold">
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="TextMD.SemiBold" parent="BaseStyleFont">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_gray_1</item>
+    </style>
+
+    <style name="TextMD.SemiBold.White" parent="TextMD.SemiBold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextMD.Medium" parent="BaseStyleFont">
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">24dp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_gray_1</item>
+    </style>
+
+    <style name="TextXS.Regular" parent="BaseStyleFont">
+        <item name="lineHeight">18dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <style name="TextXS.Regular.400" parent="TextXS.Regular">
+        <item name="android:textColor">@color/gray_400</item>
+    </style>
+
+    <style name="TextXS.Medium" parent="BaseStyleFont">
+        <item name="fontWeight">500</item>
+        <item name="lineHeight">18dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_500</item>
+    </style>
+
+    <style name="TextXS.SemiBold" parent="BaseStyleFont">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="TextXS.SemiBold.Green" parent="TextXS.SemiBold">
+        <item name="android:textColor">@color/primary_main_color_600</item>
+    </style>
+
+    <style name="TextLG.SemiBold" parent="BaseStyleFont">
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">28dp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/neutral_gray_1</item>
+    </style>
+
+    <style name="TextInputEditText" parent="BaseStyleFont">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+        <item name="android:inputType">text</item>
+        <item name="android:backgroundTint">@color/textfield_background_color</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:backgroundTintMode">add</item>
+    </style>
+
+    <style name="TextInputEditText.Password" parent="TextInputEditText">
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="TextInputEditText.Calendar" parent="TextInputEditText">
+        <item name="android:inputType">datetime</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="TextInputEditText.MultiLineText" parent="TextInputEditText">
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="TextInputEditText.Search" parent="TextInputEditText">
+        <item name="theme">@style/TextSM.Regular</item>
+        <item name="maxLines">1</item>
+        <item name="android:backgroundTint">@color/search_background_color</item>
+        <item name="backgroundTintMode">add</item>
+    </style>
+
+    <style name="HelperText" parent="BaseStyleFont">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextInputLayout.Currency" parent="TextInputLayout">
+        <item name="prefixText">Rp</item>
+        <item name="prefixTextColor">@color/gray_400</item>
+    </style>
+
+    <style name="Button" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:theme">@style/TextSM.SemiBold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="rippleColor">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <style name="Button.Primary" parent="Button">
+        <item name="android:background">@drawable/btn_primary_filled</item>
+        <item name="android:textColor">@color/txt_primary_filled</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Button">
+        <item name="android:background">@drawable/btn_secondary_filled</item>
+        <item name="android:textColor">@color/txt_secondary_filled</item>
+    </style>
+
+    <style name="Button.Secondary.Green" parent="Button">
+        <item name="android:background">@drawable/btn_secondary_green_filled</item>
+        <item name="android:textColor">@color/txt_secondary_green_filled</item>
+    </style>
+
+    <style name="Button.Outline.Primary.700" parent="Button.Outline.Gray">
+        <item name="android:strokeColor">@color/primary_main_color_700</item>
+        <item name="android:theme">@style/TextSM.SemiBold</item>
+    </style>
+
+    <style name="Button.Negative" parent="Button">
+        <item name="android:background">@drawable/btn_negative_filled</item>
+        <item name="android:textColor">@color/txt_negative_filled</item>
+    </style>
+
+<!--    style button untuk view <Button/> (defaultnya wrap ke materialButton) -->
+
+    <style name="FdbButton" parent="Widget.Material3.Button">
+        <item name="android:theme">@style/TextSM.SemiBold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/base_margin_small_12</item>
+        <item name="android:paddingBottom">@dimen/base_margin_small_12</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="FdbButton.Primary" parent="FdbButton">
+        <item name="android:backgroundTint">@color/btn_primary_selector</item>
+    </style>
+
+    <style name="FdbButton.Secondary" parent="FdbButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/txt_secondary_filled</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/gray_300</item>
+        <item name="rippleColor">@color/btn_gray_ripple_selector</item>
+    </style>
+
+    <style name="FdbButton.Secondary.GreenOutlined" parent="FdbButton.Secondary">
+        <item name="strokeColor">@color/primary_main_color_600</item>
+        <item name="rippleColor">@color/btn_green_ripple_selector</item>
+        <item name="android:textColor">@color/txt_secondary_green_filled</item>
+    </style>
+
+    <style name="FdbButton.Secondary.Green" parent="FdbButton">
+        <item name="android:backgroundTint">@color/btn_secondary_selector</item>
+        <item name="android:textColor">@color/txt_secondary_green_filled</item>
+        <item name="rippleColor">@color/btn_green_ripple_selector</item>
+    </style>
+
+    <style name="FdbButton.Secondary.Red" parent="FdbButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/txt_secondary_red</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/error_500</item>
+        <item name="rippleColor">@color/btn_red_ripple_selector</item>
+    </style>
+
+    <style name="FdbButton.Orange" parent="FdbButton">
+        <item name="android:backgroundTint">@color/btn_orange_selector</item>
+    </style>
+
+    <style name="FdbButton.Icon.Outlined" parent="Widget.Material3.Button.IconButton.Outlined">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/base_margin_small</item>
+        <item name="rippleColor">@color/btn_gray_ripple_selector</item>
+    </style>
+
+    <style name="FdbButton.Icon.Outlined.Gray" parent="FdbButton.Icon.Outlined">
+        <item name="strokeColor">@color/gray_300</item>
+        <item name="iconTint">@color/gray_700</item>
+
+    </style>
+
+    <style name="FdbButton.Icon.Outlined.Red" parent="FdbButton.Icon.Outlined">
+        <item name="strokeColor">@color/error_500</item>
+        <item name="iconTint">@color/error_700</item>
+    </style>
+
+    <style name="BottomNavigationStyle">
+        <item name="itemIconTint">@color/bottom_navigation_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_color</item>
+        <item name="itemActiveIndicatorStyle">@android:color/transparent</item>
+        <item name="itemTextAppearanceActive">@style/TextBottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextBottomNavigationView.Inactive</item>
+    </style>
+
+    <style name="TextBottomNavigationView" parent="BaseStyleFont"/>
+
+    <style name="TextBottomNavigationView.Active">
+        <item name="android:textAppearance">@style/TextXS.SemiBold</item>
+    </style>
+
+    <style name="TextBottomNavigationView.Inactive">
+        <item name="android:textAppearance">@style/TextXS.Regular.400</item>
+    </style>
+
+
+
+    <style name="Button.Outline.Gray" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/gray_300</item>
+        <item name="android:textAppearanceButton">@style/TextSM.SemiBold.2</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottomsheet_rounded</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="behavior_draggable">true</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="ToolbarSecondary" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontWeight">600</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    
+    <style name="TextInputEditTextAppearance" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingBottom">@dimen/base_margin_small</item>
+        <item name="android:paddingTop">@dimen/base_margin_medium</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ErrorText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/error_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

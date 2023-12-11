@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/base_padding_xxlarge50">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large"
+            android:text="@string/data_jaminan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/gray_25"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1"
+            app:strokeColor="@color/gray_300">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/base_padding_medium"
+                android:paddingTop="@dimen/base_padding_medium"
+                android:paddingEnd="@dimen/base_padding_medium"
+                android:paddingBottom="@dimen/base_padding_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/iv_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_information"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    style="@style/TextSM.SemiBold.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_small"
+                    android:text="@string/bisa_upload_lebih_dari_satu"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_information"
+                    app:layout_constraintStart_toEndOf="@+id/iv_information"
+                    app:layout_constraintTop_toTopOf="@+id/iv_information" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/cv_upload_data_jaminan"
+            layout="@layout/fragment_upload_file" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_upload_dokumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_upload_data_jaminan"
+            tools:listitem="@layout/fragment_upload_file" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large"
+            android:text="@string/jaminan_tambahan"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_upload_dokumen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tambah_jaminan"
+            style="@style/FdbButton.Orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:text="@string/tambah_jaminan"
+            android:visibility="gone"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_plus"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tambah_jaminan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tambah_jaminan"
+            tools:listitem="@layout/item_tambah_jaminan" />
+
+    </LinearLayout>
+</ScrollView>

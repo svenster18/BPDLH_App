@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:theme="@style/BottomSheetDialogTheme">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Action" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_medium"
+        android:layout_marginEnd="@dimen/base_margin_medium"
+        android:background="@color/gray_100" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_edit"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Edit" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_delete"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_medium"
+        android:layout_marginBottom="@dimen/base_margin_large_20"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Delete" />
+</androidx.appcompat.widget.LinearLayoutCompat>

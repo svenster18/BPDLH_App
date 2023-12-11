@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.FDB"
+        tools:targetApi="n">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".features.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".features.registration.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".features.fdk.FormulirPendaftaranKelompokActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.registration.RegistrasiPeroranganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.home.HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.login.update_password.UpdatePasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.login.request_forget_password.RequestForgetPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.self_assesment.SelfAssesmentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.fdkns.FormulirPendaftaranKelompokNonSosialActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.pengajuan_daftar_permohonan.PengajuanDaftarPermohonanListActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.FDB" />
+        <activity
+            android:name=".features.permohonan_pembiayaan.FormulirPermohonanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".features.permohonan_pembiayaan.PermohonanPembiayaanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".features.profile.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.profile.edit_account.EditAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeepLinkRouterActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${navScheme}" />
+                <data android:host="login" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="${hostUrlScheme}" />
+                <data android:path="/set-password" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".features.daftar_anggota_pemohon.DaftarAnggotaPemohonActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.daftar_anggota_pemohon.DetailDaftarAnggotaPemohonActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.pengajuan_daftar_permohonan_non_sosial.PengajuanDaftarPermohonanNonSosialActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.daftar_anggota_pemohon_non_sosial.DaftarAnggotaPemohonNonSosialActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.daftar_anggota_pemohon_non_sosial.DetailDaftarAnggotaPemohonNonSosialActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.registration_kelompok.RegistrasiKelompokActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.fpns.FormPermohonanNonSosialActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+        <activity
+            android:name=".features.daftar_anggota_pemohon.DaftarAnggotaPemohonSubmitActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FDB" />
+    </application>
+
+</manifest>

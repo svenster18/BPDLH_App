@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/container_button"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/base_margin_medium"
+                android:layout_margin="@dimen/base_margin_medium"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_rounded_outlined">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_step_one"
+                    android:layout_width="@dimen/base_margin_large"
+                    android:layout_height="@dimen/base_margin_large"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/gl_top"
+                    android:src="@drawable/ic_step_active" />
+
+                <View
+                    android:id="@+id/view_progress_one"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/base_margin_mini"
+                    android:background="@color/gray_200"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_step_one"
+                    app:layout_constraintEnd_toStartOf="@id/iv_step_two"
+                    app:layout_constraintStart_toEndOf="@id/iv_step_one"
+                    app:layout_constraintTop_toTopOf="@id/iv_step_one" />
+
+                <ImageView
+                    android:id="@+id/iv_step_two"
+                    android:layout_width="@dimen/base_margin_large"
+                    android:layout_height="@dimen/base_margin_large"
+                    android:layout_marginEnd="@dimen/base_margin_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/gl_top"
+                    app:srcCompat="@drawable/ic_step_disabled" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextSM.SemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin_medium"
+                    android:textColor="@color/gray_700"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_step"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_step_one"
+                    android:text="General information" />
+
+                <TextView
+                    android:id="@+id/tv_step"
+                    style="@style/TextSM.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin_medium"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_title"
+                    android:text="1 dari 2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextMD.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_medium"
+                android:text="@string/pertanyaan"
+                app:layout_constraintTop_toBottomOf="@+id/step"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_step_question"
+                style="@style/TextSM.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                android:text="@string/_10"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv_pertanyaan"
+                style="@style/TextSM.Regular.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                tools:text="@string/apa_usaha_utama_penghidupan_sehari_hari_dari_calon_pemohon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_small"
+                android:layout_marginBottom="@dimen/base_margin_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan">
+
+                <RadioButton
+                    android:id="@+id/radioButtonA"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_small_12"
+                    tools:text="@string/a_lorem_ipsum" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonB"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_small_12"
+                    tools:text="@string/b_lorem_ipsum" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonC"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_small_12"
+                    tools:text="@string/c_lorem_ipsum" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonD"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="@dimen/base_margin_small_12"
+                    tools:text="@string/d_lorem_ipsum" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_answer"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/gray_400"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_answer"
+                    android:textAlignment="textStart"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:ems="10"
+                    android:hint="@string/hint_answer"
+                    android:imeOptions="actionDone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/inc_footer"
+        layout="@layout/menu_formulir_perorangan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

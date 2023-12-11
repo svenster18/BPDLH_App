@@ -1,0 +1,71 @@
+ext {
+
+    androidDependencies = [
+            core                 : "androidx.core:core-ktx:$corektx_version",
+            appCompat            : 'androidx.appcompat:appcompat:1.6.1',
+            appCompatResources   : 'androidx.appcompat:appcompat-resources:1.6.1',
+            swipeRefresh         : 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0',
+            material             : "com.google.android.material:material:1.9.0",
+            constraint           : "androidx.constraintlayout:constraintlayout:2.1.4",
+            navigationFragmentKtx: "androidx.navigation:navigation-fragment-ktx:$navigation_version",
+            navigationUI         : "androidx.navigation:navigation-ui-ktx:$navigation_version",
+            lifecycleExtensions  : "androidx.lifecycle:lifecycle-extensions:2.2.0",
+            lifecycleViewmodel   : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            lifecycleLiveData    : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+            activityKtx          : "androidx.activity:activity-ktx:1.7.2",
+            fragmentKtx          : "androidx.fragment:fragment-ktx:1.6.1",
+            recyclerView         : "androidx.recyclerview:recyclerview:1.3.1",
+    ]
+    utilsDependencies = [
+            fastAdapter      : "com.mikepenz:fastadapter:$fast_adapter",
+            fastAdapterDiff  : "com.mikepenz:fastadapter-extensions-diff:$fast_adapter",
+            fastAdapterScroll: "com.mikepenz:fastadapter-extensions-scroll:$fast_adapter",
+            fastAdapterUtils : "com.mikepenz:fastadapter-extensions-utils:$fast_adapter",
+            fastAdapterBinding: "com.mikepenz:fastadapter-extensions-binding:${fast_adapter}",
+            glide            : "com.github.bumptech.glide:glide:$glide_version",
+            timber           : "com.jakewharton.timber:timber:$timber_version",
+            preferences      : "androidx.preference:preference-ktx:1.2.0",
+            deeplink         : "com.airbnb:deeplinkdispatch:$deeplink_version",
+            circularImage    : "com.mikhaellopez:circularimageview:$circular_img_version",
+            lottie           : "com.airbnb.android:lottie:$lottie_version",
+            camera           : "com.github.dhaval2404:imagepicker:2.1"
+    ]
+    firebaseDependencies = [
+            config     : "com.google.firebase:firebase-config-ktx:$firebase_config_version",
+            analytics  : "com.google.firebase:firebase-analytics-ktx:$firebase_analytic_version",
+            crashlytics: "com.google.firebase:firebase-crashlytics-ktx:$firebase_crashlytics_version"
+    ]
+    rxJavaAndroidDependencies = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$rx_java_version",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+    ]
+    daggerDependencies = [
+            daggerAndroid       : "com.google.dagger:dagger-android:$dagger_version",
+            daggerAndroidSupport: "com.google.dagger:dagger-android-support:$dagger_version"
+    ]
+    daggerKaptDependencies = [
+            daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$dagger_version",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:$dagger_version"
+    ]
+    deepLinkKaptDependencies = [
+            deeplinkProcessor: "com.airbnb:deeplinkdispatch-processor:$deeplink_version",
+    ]
+    okHttpDependencies = [
+            okhttp      : "com.squareup.okhttp3:okhttp:$okhttp_version",
+            okhttpLoging: "com.squareup.okhttp3:logging-interceptor:$logging_interceptor"
+    ]
+    retrofitDependencies = [
+            retrofit          : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:$rx_adapter_version",
+            gsonConverter     : "com.squareup.retrofit2:converter-gson:$gson_version",
+            retrofitCoroutines: "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofit_coroutines_adapter_version"
+    ]
+    roomDependencies = [
+            roomRuntime: "androidx.room:room-runtime:$room_version",
+            roomRxJava : "androidx.room:room-rxjava2:$room_version",
+            roomKtx    : "androidx.room:room-ktx:$room_version"
+    ]
+    roomKaptDependencies = [
+            roomCompiler : "androidx.room:room-compiler:$room_version"
+    ]
+}

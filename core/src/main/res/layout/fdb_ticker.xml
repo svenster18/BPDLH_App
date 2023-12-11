@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/base_margin_medium"
+    tools:background="@drawable/ticker_bg_info">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/base_margin_large_20"
+        android:layout_height="@dimen/base_margin_large_20"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/ic_search" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextMD.SemiBold"
+        android:textColor="@color/semantic_warning_700"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_small"
+        app:layout_constraintStart_toEndOf="@id/iv_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title dummy" />
+
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/TextXS.Regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin_small"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="very long text."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

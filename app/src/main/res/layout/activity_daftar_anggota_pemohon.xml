@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.daftar_anggota_pemohon.DaftarAnggotaPemohonActivity">
+
+    <include
+        android:id="@+id/inc_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_tambah_debitur"
+        style="@style/FdbButton.Orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:text="@string/text_tambah_debitur"
+        app:icon="@drawable/ic_plus"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inc_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/base_margin_small"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/ll_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_tambah_debitur">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_desc"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingVertical="@dimen/base_margin_medium"
+                android:paddingHorizontal="@dimen/base_margin_medium"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextSM.Regular.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_total_nilai_permohonan" />
+
+                <TextView
+                    android:id="@+id/tv_total_nilai_permohonan_value"
+                    style="@style/TextSM.SemiBold.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="RP 101.020.100"/>
+
+                <TextView
+                    style="@style/TextSM.Regular.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_terbilang" />
+
+                <TextView
+                    android:id="@+id/tv_terbilang_value"
+                    style="@style/TextSM.SemiBold.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Seratus satu juta dua puluh ribu seratus Rupiah"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_debitur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_tambah_debitur"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_debitur" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/base_margin_medium"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_save_draft"
+            style="@style/FdbButton.Secondary"
+            android:enabled="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:text="@string/btn_lanjutkan_draft"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/FdbButton.Primary"
+            android:enabled="false"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:text="@string/btn_submit"/>
+
+        <Button
+            android:id="@+id/btn_finalisasi_registrasi"
+            style="@style/FdbButton.Primary"
+            android:enabled="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:text="@string/btn_finalisasi_registrasi"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

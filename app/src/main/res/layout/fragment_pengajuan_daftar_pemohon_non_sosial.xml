@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".features.pengajuan_daftar_permohonan_non_sosial.PengajuanDaftarPermohonanNonSosialActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data_pemohon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:overScrollMode="always"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin_large"
+        android:contentDescription="@string/text_data_empty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_empty_title"
+        app:srcCompat="@drawable/ic_empty_data"/>
+
+    <TextView
+        android:id="@+id/tv_empty_title"
+        style="@style/TextMD.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_data_empty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_empty_message"
+        style="@style/TextSM.Regular.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin_small"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_empty_title"
+        tools:text="Lorem ipsum dolor sit amet consectetur."/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_empty,tv_empty_title,tv_empty_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

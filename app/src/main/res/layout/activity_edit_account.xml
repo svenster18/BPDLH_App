@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/inc_appbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.profile.edit_account.EditAccountActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:layout_marginBottom="@dimen/base_margin_large">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="116dp"
+                    android:layout_marginStart="@dimen/base_margin_medium"
+                    android:layout_marginEnd="@dimen/base_margin_medium"
+                    app:srcCompat="@drawable/banner_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="@dimen/base_margin_large_32"
+                    app:srcCompat="@drawable/ic_avatar"
+                    app:civ_border_width="@dimen/base_margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+                <ImageButton
+                    android:id="@+id/btn_edit"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="-16dp"
+                    android:layout_marginBottom="@dimen/base_margin_small"
+                    android:background="@drawable/bg_white_outlined_gray"
+                    app:srcCompat="@drawable/ic_edit_2_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_photo"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_photo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:text="@string/e_mail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_email"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_nama_lembaga"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/nama_lembaga" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_nama_lembaga"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nama_lembaga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/lembaga_hint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_sk"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/sk_pembentukan_berita_acara" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_sk"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_sk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:id="@+id/alamat_ktp"
+                layout="@layout/fragment_alamat_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:layout_marginEnd="0dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextMD.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large"
+                android:text="@string/informasi_narahubung"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nama_narahubung"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/nama_narahubung" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_nama_narahubung"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nama_narahubung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_jabatan"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/jabatan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_jabatan"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jabatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_telepon"
+                style="@style/TextSM.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_large_20"
+                android:text="@string/telepon" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIL_telepon"
+                style="@style/TextInputLayout"
+                android:layout_marginTop="@dimen/base_margin_small"
+                android:layout_marginBottom="@dimen/base_margin_xlarge_40">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_telepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:maxLength="15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_ubah"
+                style="@style/TextSM.SemiBold.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin_medium"
+                android:layout_marginTop="@dimen/base_margin_medium"
+                android:layout_marginEnd="@dimen/base_margin_medium"
+                android:layout_marginBottom="@dimen/base_margin_small"
+                android:text="@string/ubah"
+                app:cornerRadius="@dimen/base_margin_small" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

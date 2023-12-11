@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/white"
+            android:contentDescription="@string/button_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:srcCompat="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextMD.SemiBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_close"
+            app:layout_constraintTop_toTopOf="@+id/btn_close"
+            tools:text="Tambah Kegiatan Kelompok" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:background="@color/gray_100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/base_margin_xlarge_40"
+            android:layout_height="@dimen/base_margin_mini"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:background="@color/gray_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_category"
+            style="@style/TextSM.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            tools:text="Kategori" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_item_category"
+            style="@style/TextInputLayout.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/tv_item_category"
+            app:layout_constraintStart_toStartOf="@id/tv_item_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_category"
+            tools:visibility="gone">
+
+            <AutoCompleteTextView
+                android:id="@+id/atv_item_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/text_kategori_hint"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_item_mitra_usaha"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/til_item_category"
+            app:layout_constraintStart_toStartOf="@id/til_item_category"
+            app:layout_constraintTop_toBottomOf="@id/til_item_category"
+            tools:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_item_mitra_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="@string/text_mitra_usaha_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:lines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_item_desc"
+            style="@style/TextSM.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginHorizontal="@dimen/base_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_item_mitra_usaha"
+            tools:text="Deskripsi" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_item_desc"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_desc">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="@string/text_deskripsi_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="3"
+                android:scrollbars="vertical"
+                tools:text="Kegiatan pertama: \n1) menebang pohon\n2) Menanam pohon" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_item_desc,til_item_desc" />
+
+        <Button
+            android:id="@+id/btn_batal"
+            style="@style/FdbButton.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin_medium"
+            android:layout_marginEnd="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_medium"
+            android:text="@string/batal"
+            app:layout_constraintEnd_toStartOf="@id/btn_submit"
+            app:layout_constraintStart_toStartOf="@id/til_item_desc"
+            app:layout_constraintTop_toBottomOf="@id/til_item_desc"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/FdbButton.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_small"
+            android:layout_marginEnd="@dimen/base_margin_medium"
+            android:text="@string/btn_submit"
+            app:layout_constraintBottom_toBottomOf="@id/btn_batal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_batal"
+            app:layout_constraintTop_toTopOf="@id/btn_batal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

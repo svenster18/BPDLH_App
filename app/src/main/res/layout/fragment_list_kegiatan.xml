@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_tambah_kegiatan"
+        style="@style/FdbButton.Orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:layout_marginBottom="@dimen/base_margin_large_20"
+        android:text="@string/tambah_gambaran_umum"
+        app:icon="@drawable/ic_plus"
+        app:iconGravity="textStart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data_kegiatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:overScrollMode="always"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin_large"
+        android:layout_marginTop="@dimen/base_margin_large"
+        android:contentDescription="@string/text_data_empty"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_empty_data"/>
+
+    <TextView
+        android:id="@+id/tv_empty_title"
+        style="@style/TextMD.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/text_data_empty"/>
+
+    <TextView
+        android:id="@+id/tv_empty_message"
+        style="@style/TextSM.Regular.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin_small"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/base_margin_medium"
+        tools:text="Lorem ipsum dolor sit amet consectetur."/>
+
+</LinearLayout>

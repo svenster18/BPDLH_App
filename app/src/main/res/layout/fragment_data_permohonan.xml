@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Step1TundaTebangFragment">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/jenis_layanan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_jenis_layanan"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_jenis_layanan"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                tools:hint="@string/tunda_tebang" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/nominal_permohonan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_nominal_permohonan"
+            style="@style/TextInputLayout.Currency"
+            android:layout_marginTop="@dimen/base_margin_small">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_nominal_permohonan"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/terbilang" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_terbilang"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_terbilang"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="-" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="Jangka Waktu (Tahun)" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_jangka_waktu"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_jangka_waktu"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="5" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/skema_pembiayaan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_skema_pembiayaan"
+            style="@style/TextInputLayout.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIL_rencana_penggunaan_modal_pinjaman">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_skema_pembiayaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Revolvong/Non Revolvong" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_6"
+            style="@style/TextSM.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin_medium"
+            android:layout_marginTop="@dimen/base_margin_large_20"
+            android:text="@string/rencana_jaminan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textIL_rencana_jaminan"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="@dimen/base_margin_small"
+            android:layout_marginBottom="@dimen/base_margin_xlarge_40">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_rencana_jaminan"
+                style="@style/TextInputEditText.MultiLineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/masukan_rencana_jaminan"
+                android:inputType="textMultiLine"
+                android:lines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/base_button_size"
+                android:layout_height="@dimen/base_button_size"
+                android:layout_margin="@dimen/base_margin_medium"
+                android:src="@drawable/ic_self_assesment"/>
+
+            <TextView
+                android:id="@+id/til_self_assesment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/self_assesment_title"
+                style="@style/TextMD.SemiBold"
+                />
+        </LinearLayout>
+
+        <id.bpdlh.fdb.core.common.widget.FdbBadge
+            android:id="@+id/bade_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:badgeMessage="@string/data_send"
+            app:badgeType="success"
+            android:layout_margin="@dimen/base_margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container" />
+
+        <TextView
+            android:id="@+id/desc_self_assesment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin_medium"
+            android:text="@string/self_assesment_desc"
+            style="@style/TextSM.Regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bade_success"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/base_padding_large"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_start"
+                style="@style/Button.Primary"
+                android:layout_height="@dimen/base_button_size"
+                android:minHeight="0dp"
+                android:layout_margin="@dimen/cardview_default_radius"
+                android:text="@string/self_assesment_button_finish"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

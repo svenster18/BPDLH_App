@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FdbTicker">
+        <attr name="tickerTitle" format="string"/>
+        <attr name="tickerMessage" format="string"/>
+        <attr name="tickerType">
+            <flag name="info" value="1"/>
+            <flag name="success" value="2"/>
+            <flag name="warning" value="3"/>
+            <flag name="error" value="4"/>
+        </attr>
+        <attr name="tickerDrawable" format="reference"/>
+        <attr name="tickerDrawableRight" format="reference"/>
+        <attr name="tickerBackground" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="FdbBadge">
+        <attr name="badgeMessage" format="string"/>
+        <attr name="badgeType">
+            <flag name="draft" value="0" />
+            <flag name="success" value="1"/>
+            <flag name="warning" value="2"/>
+            <flag name="error" value="3"/>
+            <flag name="waiting" value="4"/>
+            <flag name="onProgress" value="5"/>
+            <flag name="onVerify" value="6"/>
+            <flag name="verified" value="7"/>
+        </attr>
+        <attr name="badgeDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FdbStepper">
+        <attr name="step" format="integer" />
+        <attr name="description" format="string" />
+    </declare-styleable>
+</resources>

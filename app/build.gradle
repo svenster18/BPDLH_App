@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.appdistribution'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+apply from: "$rootDir/common.gradle"
+
+android {
+    namespace 'id.bpdlh.fdb'
+
+    compileSdk appCompileSdk
+    buildToolsVersion appBuildTools
+    defaultConfig {
+        applicationId applicationId
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        firebaseAppDistribution {
+            releaseNotesFile = "release-notes.txt"
+            groups = "qa-fdb"
+        }
+        buildConfigField "long", "VERSION_CODE", "${generateVersionCode()}"
+        buildConfigField "String", "VERSION_NAME", "\"${generateVersionName()}\""
+    }
+
+    defaultConfig {
+        def addConstant = {constantName, constantValue ->
+            manifestPlaceholders += [ (constantName):constantValue]
+            buildConfigField "String", "MAPS_API_KEY", "\"AIzaSyAcogOpIZMik3ZNpwstH4XVWJCaDb5tEwg\""
+        }
+
+        addConstant("MAPS_API_KEY", "AIzaSyAcogOpIZMik3ZNpwstH4XVWJCaDb5tEwg")
+    }
+
+    signingConfigs {
+        debug {
+            storeFile rootProject.file("bpdlh-fdb-debug.jks")
+            storePassword DEBUG_STORE_PASSWORD
+            keyAlias DEBUG_KEY_ALIAS
+            keyPassword DEBUG_KEY_PASSWORD
+        }
+        staging {
+            storeFile rootProject.file("bpdlh-fdb-staging.jks")
+            storePassword STAGING_STORE_PASSWORD
+            keyAlias STAGING_KEY_ALIAS
+            keyPassword STAGING_KEY_PASSWORD
+        }
+        release {
+            storeFile rootProject.file("bpdlh-fdb-release.jks")
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            testCoverageEnabled true
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            signingConfig signingConfigs.debug
+        }
+        staging {
+            shrinkResources false
+            minifyEnabled false
+            signingConfig signingConfigs.staging
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            versionNameSuffix "-staging"
+            applicationIdSuffix ".staging"
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def project = "BPDLHApp"
+                def SEP = "_"
+                def version = variant.versionName
+                def newApkName = project + SEP + version + ".apk"
+                outputFileName = new File(newApkName)
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation project(':core')
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+}

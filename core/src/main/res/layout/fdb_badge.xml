@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/base_margin_small"
+    android:paddingEnd="@dimen/base_margin_small"
+    android:background="@drawable/tab_chip_warning">
+
+    <ImageView
+        android:id="@+id/iv_badge"
+        android:layout_width="@dimen/base_margin_medium"
+        android:layout_height="@dimen/base_margin_medium"
+        app:layout_constraintEnd_toStartOf="@id/tv_badge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_badge"
+        app:layout_constraintBottom_toBottomOf="@id/tv_badge"
+        tools:srcCompat="@drawable/ic_error_warning_line"/>
+
+    <TextView
+        android:id="@+id/tv_badge"
+        style="@style/TextSM.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_margin_small"
+        app:layout_constraintStart_toEndOf="@id/iv_badge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Ini loh badge" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_question_answer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextMD.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_large"
+        tools:text="@string/pertanyaan"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_number_1"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/base_margin_mini"
+        tools:text="@string/_1"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/base_margin_mini"
+        tools:text="@string/dari"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/tv_number_etc"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_number_etc"
+        style="@style/TextSM.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/base_margin_medium"
+        tools:text="@string/_10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_pertanyaan"
+        style="@style/TextSM.Regular.2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:layout_marginEnd="@dimen/base_margin_medium"
+        tools:text="@string/apa_usaha_utama_penghidupan_sehari_hari_dari_calon_pemohon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_medium"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:layout_marginEnd="@dimen/base_margin_medium"
+        android:layout_marginBottom="@dimen/base_margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan">
+
+        <RadioButton
+            android:id="@+id/radioButtonA"
+            style="@style/RadioButton"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            tools:text="@string/a_lorem_ipsum" />
+
+        <RadioButton
+            android:id="@+id/radioButtonB"
+            style="@style/RadioButton"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            android:checked="true"
+            tools:text="@string/b_lorem_ipsum" />
+
+        <RadioButton
+            android:id="@+id/radioButtonC"
+            style="@style/RadioButton"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            tools:text="@string/c_lorem_ipsum" />
+
+        <RadioButton
+            android:id="@+id/radioButtonD"
+            style="@style/RadioButton"
+            android:layout_marginTop="@dimen/base_margin_small_12"
+            tools:text="@string/d_lorem_ipsum" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textIL_answer"
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/base_margin_large_20"
+        android:layout_marginBottom="@dimen/base_margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan"
+        tools:visibility="visible">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_answer"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/jawaban" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
