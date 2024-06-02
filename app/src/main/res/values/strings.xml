@@ -602,4 +602,9 @@
     <string name="form_permohonan_non_sosial_harga_jual_kg">Harga Jual Terakhir per KG/Liter</string>
 
 
+    <string name="dokumen_penawaran">Dokumen Penawaran:</string>
+    <string name="penyaluran_pembiayaan_fasilitas_dana">Penyaluran Pembiayaan Fasilitas Dana</string>
+    <string name="lihat_detail">Lihat Detail</string>
+
+
 </resources>

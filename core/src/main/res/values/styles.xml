@@ -322,6 +322,12 @@
         <item name="android:textColor">@color/txt_secondary_green_filled</item>
     </style>
 
+    <style name="FdbButton.Secondary.GreenOutlined.700" parent="FdbButton.Secondary">
+        <item name="strokeColor">@color/primary_main_color_700</item>
+        <item name="rippleColor">@color/btn_green_ripple_selector</item>
+        <item name="android:textColor">@color/txt_secondary_green_700_filled</item>
+    </style>
+
     <style name="FdbButton.Secondary.Green" parent="FdbButton">
         <item name="android:backgroundTint">@color/btn_secondary_selector</item>
         <item name="android:textColor">@color/txt_secondary_green_filled</item>
